@@ -1,0 +1,104 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "645e8d68-d9e1-48b3-98a5-3b81aa58d1ea")
+	(paper "A4")
+	(title_block
+		(title "BeanBike Controller")
+		(date "2025-10-08")
+		(rev "1")
+		(company "Ginobeano")
+	)
+	(lib_symbols)
+	(sheet
+		(at 160.02 15.24)
+		(size 100.33 63.5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cb65d884-b6c2-4fce-b3da-979d2720e5cc")
+		(property "Sheetname" "Controller"
+			(at 160.02 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "beanbike_controller.kicad_sch"
+			(at 160.02 79.3246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Controller"
+				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 15.24 15.24)
+		(size 93.98 63.5)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "ceef88aa-c829-4630-8455-6c437ac60286")
+		(property "Sheetname" "Power"
+			(at 15.24 14.5284 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "beanbike_power.kicad_sch"
+			(at 15.24 79.3246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Controller"
+				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
