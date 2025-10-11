@@ -30,3 +30,9 @@ But now I have battery level, 3.3v (MCU), 5v (display), 12v (misc like lights).
 I made a more complex circuit, but then I realized eBike batteries already have a BMS 😭 so I got rid of it.
 So far, kinda liking this, but I am dreading the day I have to make a case, especially waterproof :(  
 
+## 10/10/2025 9 PM - Added Connectors  
+
+I went through and did all the tedious work of creating the connectors. 
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTU0MywicHVyIjoiYmxvYl9pZCJ9fQ==--e89d0bf58e68c16cda045891f44fc5b6902c0a66/image.png)
+I was also thinking about the features I am going to add specifically for anti-theft. I want to have enough smart anti-theft features that you don't need to lock your bike up. So I will have things like PIN, Phone detection to make sure you can ride it. To make sure that if you do try to steal it, you won't be able to, I will lock the motor, start an alarm, pretty much cut power, other than to the anti-theft features, oh, and also GPS. So this would be effective, but thieves could still pick it up, take out the battery, and other things so I will probably still carry one around, but for those times when you forget it, then you can still be calm knowing your bike won't get stolen.  
+
