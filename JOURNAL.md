@@ -10,7 +10,7 @@ This is my journal of the design and building process of **BeanBike**.
 You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/396).
 
 
-## 10/10/2025 - Started KiCad Project  
+## 10/10/2025 5 PM - Started KiCad Project  
 
 Didn't really do a lot, just started the KiCad Project and labeled all the MCU pins for the controller.
 
@@ -20,4 +20,12 @@ Didn't really do a lot, just started the KiCad Project and labeled all the MCU p
 Well, pretty much it, but I need 250 characters, so I will talk about blueprint. I kinda am liking it, it is obviously a continuation of Highway, but I like it. Ngl kinda feels unoriginal, but I still like it. 
 
 It is basically Highway, but with some parts of SoM and more refined.  
+
+## 10/10/2025 8 PM - Finished V1 Power Circuit  
+
+I basically made the schematic for the power supply.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUzNCwicHVyIjoiYmxvYl9pZCJ9fQ==--8241470e2299ee4d2047ad70ae19330d94f9d8c5/image.png)
+Most of the time was spent researching and seeing what I had to do to make sure it is safe and everything gets what it wants. I am debating getting the Power on a different board, but I don't think I will.
+But now I have battery level, 3.3v (MCU), 5v (display), 12v (misc like lights). 
+  
 
