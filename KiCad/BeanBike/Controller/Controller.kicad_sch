@@ -27,7 +27,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "cb65d884-b6c2-4fce-b3da-979d2720e5cc")
-		(property "Sheetname" "Controller"
+		(property "Sheetname" "MCU"
 			(at 160.02 14.5284 0)
 			(effects
 				(font

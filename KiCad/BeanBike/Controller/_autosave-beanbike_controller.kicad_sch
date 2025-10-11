@@ -4,6 +4,12 @@
 	(generator_version "9.0")
 	(uuid "b4deb1c5-86a5-46ab-8948-6bcefbbf5c08")
 	(paper "A4")
+	(title_block
+		(title "BeanBike Controller MCU")
+		(date "2025-10-10")
+		(rev "1")
+		(company "Ginobeano")
+	)
 	(lib_symbols
 		(symbol "RF_Module:ESP32-WROOM-32"
 			(exclude_from_sim no)
@@ -1022,6 +1028,12 @@
 			(embedded_fonts no)
 		)
 	)
+	(junction
+		(at 167.64 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "29d2ca9e-4eca-455f-bc86-e1f98a996c9b")
+	)
 	(no_connect
 		(at 120.65 113.03)
 		(uuid "04bc5c10-000c-4381-a9ae-1722bbc7f185")
@@ -1066,6 +1078,16 @@
 	)
 	(wire
 		(pts
+			(xy 167.64 130.81) (xy 167.64 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5493b90d-90b2-4d26-a9f7-f02949b9855a")
+	)
+	(wire
+		(pts
 			(xy 167.64 130.81) (xy 151.13 130.81)
 		)
 		(stroke
@@ -1083,6 +1105,16 @@
 			(type default)
 		)
 		(uuid "ecd40b1b-6e3a-4f52-8e37-1d7e46f55043")
+	)
+	(wire
+		(pts
+			(xy 167.64 132.08) (xy 213.36 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fad57481-6993-45f0-8afe-3b48a3659678")
 	)
 	(global_label "MCU-GPIO34"
 		(shape input)
@@ -1537,6 +1569,28 @@
 		(uuid "d2fa4e3b-2a82-418d-9791-9a5a97fd4fdf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 166.6338 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "BATT_Level"
+		(shape input)
+		(at 213.36 132.08 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "dc9ec6f1-3dd6-41e9-a6ce-053ab06d7d40")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 226.4447 132.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
