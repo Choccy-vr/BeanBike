@@ -36,3 +36,10 @@ I went through and did all the tedious work of creating the connectors.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTU0MywicHVyIjoiYmxvYl9pZCJ9fQ==--e89d0bf58e68c16cda045891f44fc5b6902c0a66/image.png)
 I was also thinking about the features I am going to add specifically for anti-theft. I want to have enough smart anti-theft features that you don't need to lock your bike up. So I will have things like PIN, Phone detection to make sure you can ride it. To make sure that if you do try to steal it, you won't be able to, I will lock the motor, start an alarm, pretty much cut power, other than to the anti-theft features, oh, and also GPS. So this would be effective, but thieves could still pick it up, take out the battery, and other things so I will probably still carry one around, but for those times when you forget it, then you can still be calm knowing your bike won't get stolen.  
 
+## 10/11/2025 - Motor Controller  
+
+I finished the Motor connection and etc.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY0MCwicHVyIjoiYmxvYl9pZCJ9fQ==--03ccd02f88be4c9362fb244c248106f154a25d63/image.png)
+So I used a BLDC motor IC for easy controlling and etc. Honestly I don't get why eBike controller are so expensive this seems down right resonable.
+When I brake it will now automatically cut power to the motor no matter what (Hard wired) and I can control it with firmware too. So now I am going to go through and finish a few things then I will test it in a simulation and then I should be good to go to the PCB.  
+
