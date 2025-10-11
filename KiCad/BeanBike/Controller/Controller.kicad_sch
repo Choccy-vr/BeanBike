@@ -12,6 +12,48 @@
 	)
 	(lib_symbols)
 	(sheet
+		(at 160.02 102.87)
+		(size 119.38 57.15)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2c1bff84-81c5-435a-a8af-2b7800a2d1fe")
+		(property "Sheetname" "Connectors"
+			(at 160.02 102.1584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "beanbike_controller_connectors.kicad_sch"
+			(at 160.02 160.6046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Controller"
+				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 160.02 15.24)
 		(size 100.33 63.5)
 		(exclude_from_sim no)
