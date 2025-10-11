@@ -27,5 +27,6 @@ I basically made the schematic for the power supply.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUzNCwicHVyIjoiYmxvYl9pZCJ9fQ==--8241470e2299ee4d2047ad70ae19330d94f9d8c5/image.png)
 Most of the time was spent researching and seeing what I had to do to make sure it is safe and everything gets what it wants. I am debating getting the Power on a different board, but I don't think I will.
 But now I have battery level, 3.3v (MCU), 5v (display), 12v (misc like lights). 
+I made a more complex circuit, but then I realized eBike batteries already have a BMS 😭 so I got rid of it.
 So far, kinda liking this, but I am dreading the day I have to make a case, especially waterproof :(  
 
