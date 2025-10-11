@@ -49,3 +49,9 @@ I hate selecting footprints; let's make that clear right now, I hate it.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY3MCwicHVyIjoiYmxvYl9pZCJ9fQ==--02d80125252332b05c6f6fb64ecf9d814c531c28/image.png)
 I ran the ERC and fixed all those problems, and I moved to selecting the footprints. I got a list on Digi-Key for all my parts, but I hate this still. A big, big problem I am facing right now is that I need 3 buck converters for 3.3v, 5v, and 12v. Someone suggested going from 12v to 5v then to 3.3v so I will try that.  
 
+## 10/11/2025 7 PM - 48v -> 24v  
+
+Ok for the past 2 hours I have been working on the buck converters.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY5OSwicHVyIjoiYmxvYl9pZCJ9fQ==--883f798163d37c0d06bf2b47560470d24ca28e1a/image.png)
+Tell me why it is so hard to just go down to a lower voltage doesn't make sense but whatever. I spent1.5 hours trying to make my own but the n I came across a actual life saver [webench.ti.com/power-designer](webench.ti.com/power-designer). I got done my 24v converter and now the rest  
+
