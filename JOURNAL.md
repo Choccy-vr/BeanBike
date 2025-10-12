@@ -55,3 +55,9 @@ Ok for the past 2 hours I have been working on the buck converters.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTY5OSwicHVyIjoiYmxvYl9pZCJ9fQ==--883f798163d37c0d06bf2b47560470d24ca28e1a/image.png)
 Tell me why it is so hard to just go down to a lower voltage doesn't make sense but whatever. I spent1.5 hours trying to make my own but the n I came across a actual life saver [webench.ti.com/power-designer](webench.ti.com/power-designer). I got done my 24v converter and now the rest  
 
+## 10/11/2025 8 PM - Finished V1 Schematic  
+
+I finally finally finished V1 of my motor controller!
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTcxOSwicHVyIjoiYmxvYl9pZCJ9fQ==--e81ce31382838081d9f66ed0659053e2d6eead8b/image.png)
+You know how earlier I said I don't get why motor controllers are so expensive? Yeah, I take that back. I finished all the conversions and now have 24v, 12v, 5v, and 3.3v available to me, all at around 2.5A. I thought the inductors would've made this huge, but ehh, I am estimating around 100mm by 90mm. Then, to top it all off, I did footprints my favorite.  
+
