@@ -61,9 +61,15 @@ I finally finally finished V1 of my motor controller!
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTcxOSwicHVyIjoiYmxvYl9pZCJ9fQ==--e81ce31382838081d9f66ed0659053e2d6eead8b/image.png)
 You know how earlier I said I don't get why motor controllers are so expensive? Yeah, I take that back. I finished all the conversions and now have 24v, 12v, 5v, and 3.3v available to me, all at around 2.5A. I thought the inductors would've made this huge, but ehh, I am estimating around 100mm by 90mm. Then, to top it all off, I did footprints my favorite.  
 
-## 10/12/2025 - Started PCB  
+## 10/12/2025 3 PM - Started PCB  
 
 I started on the PCB.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTg2OCwicHVyIjoiYmxvYl9pZCJ9fQ==--89756bc4c9c01c7c5119c1e327a72a686d879c30/image.png)
 I started by grouping the components into sections of the board, like one group for power, one for motor, one for connectors, and one for the MCU. I then combined them into a compact layout, drew my edge cuts, and started plotting traces. I have done most of the power, and now I am on data. The board will have 4 layers, front and back for power, and the middle layers for data. After I finish it, I will probably ask someone to review it because this is my first PCB with a lot of current, and I need it to be safe.  
+
+## 10/12/2025 9 PM - Finished V1 PCB  
+
+I finished routing all the PCB, and it should be good!
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTkxOSwicHVyIjoiYmxvYl9pZCJ9fQ==--72c7977c4bda1612ea090db430647902a0f86e98/image.png)
+To be honest, I am not that confident, so that is why I am getting it reviewed by someone a lot smarter than me. This feels really nice to get done. I would say this is the hardest part; it should all be smooth sailing from here. And best of all, software is next! Oh, also, I forgot to run to DRC, guess I have to do that :( I really hate all the repetitive work of making PCBs like it is fun until you get to that part.  
 
