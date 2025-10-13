@@ -12,6 +12,48 @@
 	)
 	(lib_symbols)
 	(sheet
+		(at 15.24 102.87)
+		(size 93.98 57.15)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "238697b4-7f68-48cd-8fc1-6b9dd21d4b8d")
+		(property "Sheetname" "Motor"
+			(at 15.24 102.1584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "beanbike_controller_motor.kicad_sch"
+			(at 15.24 160.6046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "Controller"
+				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 160.02 102.87)
 		(size 119.38 57.15)
 		(exclude_from_sim no)
