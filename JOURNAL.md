@@ -67,9 +67,15 @@ I started on the PCB.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTg2OCwicHVyIjoiYmxvYl9pZCJ9fQ==--89756bc4c9c01c7c5119c1e327a72a686d879c30/image.png)
 I started by grouping the components into sections of the board, like one group for power, one for motor, one for connectors, and one for the MCU. I then combined them into a compact layout, drew my edge cuts, and started plotting traces. I have done most of the power, and now I am on data. The board will have 4 layers, front and back for power, and the middle layers for data. After I finish it, I will probably ask someone to review it because this is my first PCB with a lot of current, and I need it to be safe.  
 
-## 10/12/2025 9 PM - Finished V1 PCB  
+## 10/12/2025 9:29 PM - Finished V1 PCB  
 
 I finished routing all the PCB, and it should be good!
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTkxOSwicHVyIjoiYmxvYl9pZCJ9fQ==--72c7977c4bda1612ea090db430647902a0f86e98/image.png)
 To be honest, I am not that confident, so that is why I am getting it reviewed by someone a lot smarter than me. This feels really nice to get done. I would say this is the hardest part; it should all be smooth sailing from here. And best of all, software is next! Oh, also, I forgot to run to DRC, guess I have to do that :( I really hate all the repetitive work of making PCBs like it is fun until you get to that part.  
+
+## 10/12/2025 9:48 PM - Quick Update: DRC & Silkscreen  
+
+Quick update: I fixed DRC violations and added silk screen text.  
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTkyMSwicHVyIjoiYmxvYl9pZCJ9fQ==--3a524b9488808c1dd136c4c42497d863675c9223/image.png)
+I don't think I am done with it completely. I still have to add all the part numbers, but really, I already have them picked out; I just need to put them in and generate the BOM and Gerbers. It is easy but repetitive. Welp, see you then  
 
