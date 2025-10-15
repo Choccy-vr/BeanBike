@@ -85,3 +85,9 @@ I have done alot of research and getting feedback.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjI1NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d4da2f98b9ea5b46ba5ad298e70d54c87835423a/image.png)
 I have gotten feedback on my PCB and how not to burn down my house. I need to majorly increase the track width but I have decided to just up my board to 6 layers and it would be like this. Back:Solid GND In4:PWR_MOTOR then the rest is yet to be decided but that is what is new. Then in v1 signals were being passed from one area to another (mostly at connectors) so I am fixing that. I felt it would be easier to just redo the routing and as a perk I can make it neater.  
 
+## 10/15/2025 - Layout PCB v2  
+
+I have laid out all of PCB v2 this time, taking a lot more care into it.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjQxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--51fb2eb957b323b2416679f8a18b720a91a96e1b/image.png)
+I have decided to omit the 24V and 12V lines. Really, I had no use for them other than lights, but after seeing how expensive wired-in lights are, I decided against it. The PCB is split into 3 parts now: MCU, Power, and Motor. I am still deciding whether to arrange it vertically or more horizontally, but I am thinking vertically.  
+
