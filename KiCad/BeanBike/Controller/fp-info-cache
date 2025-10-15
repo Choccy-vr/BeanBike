@@ -1,4 +1,25 @@
-25669303006869898
+25693947503490352
+0630CDMCCDS_3R3MC
+IND_CCDS-3R3MC_SUM
+
+0630CDMCCDS-3R3MC 
+0
+2
+2
+744771008
+WE-PD_1260
+
+
+0
+2
+2
+865080340001
+WCAP-ASLI_4X5.5_DXL_
+
+
+0
+2
+2
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -60374,6 +60395,27 @@ heatsink
 0
 0
 0
+IHLP4040DZER5R6M01
+IND_IHLP-4040DZ_VIS
+
+IHLP4040DZER5R6M01 
+0
+2
+2
+IHLP4040DZER5R6M01
+IND_IHLP-4040DZ_VIS-L
+
+IHLP4040DZER5R6M01 
+0
+2
+2
+IHLP4040DZER5R6M01
+IND_IHLP-4040DZ_VIS-M
+
+IHLP4040DZER5R6M01 
+0
+2
+2
 Inductor_SMD
 L_6.3x6.3_H3
 Choke, SMD, 6.3x6.3mm 3mm height
@@ -67885,6 +67927,20 @@ Yellow 5381 Series LED
 0
 2
 2
+LMR380
+SON50P300X300X80-13N
+DRR0012E
+Power Supply
+0
+13
+13
+LMR36015ARNXR
+RNX0012B
+
+LMR36015ARNXR 
+0
+12
+12
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
@@ -70832,6 +70888,13 @@ threaded screw
 0
 4
 1
+NR6028T4R7M
+IND_NR6028T4R7M
+
+
+0
+2
+2
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
@@ -72120,6 +72183,13 @@ DIL DIP PDIP 2.54mm 7.62mm 300mil
 0
 4
 4
+PA4332_152NLT
+IND_PA4332.152NLT
+
+
+0
+2
+2
 Package_BGA
 Alliance_TFBGA-36_6x8mm_Layout6x8_P0.75mm
 Alliance TFBGA-36, NSMD, 6.0x8.0mm, 36 Ball, 6x8 Layout, 0.75mm Pitch, generated with kicad-footprint-generator ipc_bga_generator.py, https://www.alliancememory.com/wp-content/uploads/pdf/AS6C1008_Mar_2023V1.2.pdf#page=13
@@ -102931,6 +103001,34 @@ Varistor
 Varistor_Panasonic_VF
 Panasonic VF series varistor, 6x8mm body, 3.2mm height, https://mediap.industry.panasonic.eu/assets/imported/industrial.panasonic.com/cdbs/www-data/pdf/AWA0000/AWA0000C4.pdf
 Varistor VF
+0
+2
+2
+WSLP39212L500FEA
+RES_WSLP39212L500FEA
+
+
+0
+2
+2
+footprints
+IND_SRP1038A_BRN
+
+SRP1038A-100M 
+0
+2
+2
+footprints
+IND_SRP1038A_BRN-L
+
+SRP1038A-100M 
+0
+2
+2
+footprints
+IND_SRP1038A_BRN-M
+
+SRP1038A-100M 
 0
 2
 2
