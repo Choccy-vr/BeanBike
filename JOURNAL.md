@@ -79,3 +79,9 @@ Quick update: I fixed DRC violations and added silk screen text.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTkyMSwicHVyIjoiYmxvYl9pZCJ9fQ==--3a524b9488808c1dd136c4c42497d863675c9223/image.png)
 I don't think I am done with it completely. I still have to add all the part numbers, but really, I already have them picked out; I just need to put them in and generate the BOM and Gerbers. It is easy but repetitive. Welp, see you then  
 
+## 10/14/2025 - PCB v2  
+
+I have done alot of research and getting feedback.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjI1NiwicHVyIjoiYmxvYl9pZCJ9fQ==--d4da2f98b9ea5b46ba5ad298e70d54c87835423a/image.png)
+I have gotten feedback on my PCB and how not to burn down my house. I need to majorly increase the track width but I have decided to just up my board to 6 layers and it would be like this. Back:Solid GND In4:PWR_MOTOR then the rest is yet to be decided but that is what is new. Then in v1 signals were being passed from one area to another (mostly at connectors) so I am fixing that. I felt it would be easier to just redo the routing and as a perk I can make it neater.  
+
