@@ -91,3 +91,9 @@ I have laid out all of PCB v2 this time, taking a lot more care into it.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjQxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--51fb2eb957b323b2416679f8a18b720a91a96e1b/image.png)
 I have decided to omit the 24V and 12V lines. Really, I had no use for them other than lights, but after seeing how expensive wired-in lights are, I decided against it. The PCB is split into 3 parts now: MCU, Power, and Motor. I am still deciding whether to arrange it vertically or more horizontally, but I am thinking vertically.  
 
+## 10/16/2025 - Issues  
+
+Well, I laid out my PCB v2, and it's all good, but there is an issue.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjU0NywicHVyIjoiYmxvYl9pZCJ9fQ==--5e7ac3b7661c56ba94f7b6e6dff487882c250a19/image.png)
+So I laid out my PCB, it was all nice and neat, but ... I just now realized that the chip I was using the DRV8308 does not support 48v :(. So I have to replace it. I am replacing it with the DRV8353. It is a newer chip and supports 48v. But I really do not want to change everything.  
+
