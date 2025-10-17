@@ -91,9 +91,15 @@ I have laid out all of PCB v2 this time, taking a lot more care into it.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjQxOCwicHVyIjoiYmxvYl9pZCJ9fQ==--51fb2eb957b323b2416679f8a18b720a91a96e1b/image.png)
 I have decided to omit the 24V and 12V lines. Really, I had no use for them other than lights, but after seeing how expensive wired-in lights are, I decided against it. The PCB is split into 3 parts now: MCU, Power, and Motor. I am still deciding whether to arrange it vertically or more horizontally, but I am thinking vertically.  
 
-## 10/16/2025 - Issues  
+## 10/16/2025 6 PM - Issues  
 
 Well, I laid out my PCB v2, and it's all good, but there is an issue.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjU0NywicHVyIjoiYmxvYl9pZCJ9fQ==--5e7ac3b7661c56ba94f7b6e6dff487882c250a19/image.png)
 So I laid out my PCB, it was all nice and neat, but ... I just now realized that the chip I was using the DRV8308 does not support 48v :(. So I have to replace it. I am replacing it with the DRV8353. It is a newer chip and supports 48v. But I really do not want to change everything.  
+
+## 10/16/2025 9 PM - Updated Motor IC  
+
+So after a lot, I finally got the motor IC all updated.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjU2MywicHVyIjoiYmxvYl9pZCJ9fQ==--7aca53cf954b7236a22347976da6a951a3997245/image.png)
+It was a lot, but I think I finally have this all down, and it feels so nice. One good thing happened, though I had the MOSFETs mixed up, so that would not have been good. I rearranged the GPIOs to make it fit a lot better. I also got to get rid of the level shifters, and I feel it is a lot less complex.  
 
