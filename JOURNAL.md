@@ -103,3 +103,9 @@ So after a lot, I finally got the motor IC all updated.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MjU2MywicHVyIjoiYmxvYl9pZCJ9fQ==--7aca53cf954b7236a22347976da6a951a3997245/image.png)
 It was a lot, but I think I finally have this all down, and it feels so nice. One good thing happened, though I had the MOSFETs mixed up, so that would not have been good. I rearranged the GPIOs to make it fit a lot better. I also got to get rid of the level shifters, and I feel it is a lot less complex.  
 
+## 10/18/2025 - PCB v2  
+
+I routed a placed everything on PCB v2 and it should be finished.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzExMiwicHVyIjoiYmxvYl9pZCJ9fQ==--374cd558e1936bfda9d718b1a325a3058ea63345/image.png)
+Been a while. But I finished everything on PCB v2 (except silkscreen). I placed all the new components updated it and all nice and neat. I added copper fills for connecting my high-power things so I don't have to worry about big traces. But anyway, now I am getting it reviewed once again to make sure it is very good.  
+
