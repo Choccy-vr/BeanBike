@@ -12814,6 +12814,42 @@
 		(layer "Edge.Cuts")
 		(uuid "da98d8b3-176f-47c2-883d-a493f3706f41")
 	)
+	(gr_text "GINOBEANO\n"
+		(at 140.05 86.95 0)
+		(layer "F.SilkS")
+		(uuid "de3ca0ba-ef03-44fd-8fd6-421c3865aa86")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "BeanBike\nController\n48v 1200w"
+		(at 140.15 76.55 0)
+		(layer "F.SilkS")
+		(uuid "f61f90ee-3850-4d70-bca8-6b4346e6c270")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Bean\nBike\n"
+		(at 157.3 127.1 0)
+		(layer "B.SilkS")
+		(uuid "7d9d229e-55da-405a-b449-21fbea970f35")
+		(effects
+			(font
+				(size 15 15)
+				(thickness 1.875)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(segment
 		(start 130.187499 106.38)
 		(end 130.242499 106.325)
