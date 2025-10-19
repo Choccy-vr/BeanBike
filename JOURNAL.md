@@ -109,3 +109,9 @@ I routed a placed everything on PCB v2 and it should be finished.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzExMiwicHVyIjoiYmxvYl9pZCJ9fQ==--374cd558e1936bfda9d718b1a325a3058ea63345/image.png)
 Been a while. But I finished everything on PCB v2 (except silkscreen). I placed all the new components updated it and all nice and neat. I added copper fills for connecting my high-power things so I don't have to worry about big traces. But anyway, now I am getting it reviewed once again to make sure it is very good.  
 
+## 10/19/2025 - Finish PCB v2  
+
+I had a problem with my PCB, but I fixed it, and now v2 is officially finished.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzM5MiwicHVyIjoiYmxvYl9pZCJ9fQ==--80aeae5ce28ee01168b97e2b7e07c51e8dc029dc/image.png)
+In my PCB, there were some isolated copper islands, so I had to fix that by re-routing some of the PCB. This should be the actual PCB that I send to JLC PCB. Now I'm going to make the firmware, and it shouldn't be too hard. Altough I have never interacted with a SPI device without a library so that will take a bit.  
+
