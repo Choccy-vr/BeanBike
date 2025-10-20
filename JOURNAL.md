@@ -121,3 +121,10 @@ I am finally working on firmware!
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzQ5MSwicHVyIjoiYmxvYl9pZCJ9fQ==--20ec2375586308a90d845129184ca8e4d080ea64/image.png)
 Right now, I am working on the DRV8353 implementation. I have Fault detection working. For everywhere you see uart.sendData(), that is me sending data to my display (the smart thing) to see what it will decide to do with it. At first, I was a little nervous because I had never read/write raw registries from SPI, but it is kind of easy. Oh, and I also set up an interrupt on the FAULT pin to make sure I catch all faults instantly. Next up is Driver Control.  
 
+## 10/19/2025 8 PM - Finished DRV8353 implementation  
+
+I finished the DRV8353 implementation.
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzU4NSwicHVyIjoiYmxvYl9pZCJ9fQ==--aab45e828bd38e1064ff4453d20c8568d506969e/image.png)
+Note, this does not mean that my controller firmware is done, just that the code to interface with the DRV8353 is done. Anyway, I added a bunch of functions to control all the different registries. Next, I have to make the motor control code (PAS, Cruise Control, actually sending PWM signals, getting motor speed, etc.).
+  
+
