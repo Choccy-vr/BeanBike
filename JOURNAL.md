@@ -130,3 +130,11 @@ Yay, more Firmware writing
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzkwMCwicHVyIjoiYmxvYl9pZCJ9fQ==--96403e483a0b755a914aabb29582354f3b1e53ed/image.png)
 Anyway, let's first talk about #lounge exploding rn first time it has seen use in forever. Also, why did AWS go down? It was so annoying, I could do basically nothing. But back to my project, I basically just wrote a bunch of code for the firmware. That is it, I am tired and want to go to bed gn.  
 
+## 10/21/2025 - *Finished Firmware  
+
+So I finished the firmware!!
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDIxNywicHVyIjoiYmxvYl9pZCJ9fQ==--7e64469a65b6191012862d5a2b4a56ab94e8632c/image.png)
+* Well, I sort of did. 
+Software is never finished; I can just keep adding and adding, and I plan to. This is just it has enough that it will work, I can always change it. That is the great thing about software. Anyway some of the calculations may be off but this is because I don't have the motor or bike to base it off of. I am going to keep adding to it, but as of now, to the display!
+  
+
