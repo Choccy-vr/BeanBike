@@ -6,10 +6,6 @@
   ==================================================================
 -->
 
-This is my journal of the design and building process of **BeanBike**.  
-You can view this journal in more detail on **Hack Club Blueprint** [here](https://blueprint.hackclub.com/projects/396).
-
-
 ## 10/10/2025 5 PM - Started KiCad Project  
 
 Didn't really do a lot, just started the KiCad Project and labeled all the MCU pins for the controller.
@@ -127,4 +123,10 @@ I finished the DRV8353 implementation.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzU4NSwicHVyIjoiYmxvYl9pZCJ9fQ==--aab45e828bd38e1064ff4453d20c8568d506969e/image.png)
 Note, this does not mean that my controller firmware is done, just that the code to interface with the DRV8353 is done. Anyway, I added a bunch of functions to control all the different registries. Next, I have to make the motor control code (PAS, Cruise Control, actually sending PWM signals, getting motor speed, etc.).
   
+
+## 10/20/2025 - More Firmware  
+
+Yay, more Firmware writing
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MzkwMCwicHVyIjoiYmxvYl9pZCJ9fQ==--96403e483a0b755a914aabb29582354f3b1e53ed/image.png)
+Anyway, let's first talk about #lounge exploding rn first time it has seen use in forever. Also, why did AWS go down? It was so annoying, I could do basically nothing. But back to my project, I basically just wrote a bunch of code for the firmware. That is it, I am tired and want to go to bed gn.  
 
