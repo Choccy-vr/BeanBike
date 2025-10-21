@@ -17,8 +17,8 @@ float Battery::getBatteryVoltage() {
 }
 
 float Battery::getBatteryLevel() {
-    const float minVoltage = 36.0f; // Minimum battery voltage
-    const float maxVoltage = 42.0f; // Maximum battery voltage
+    const float minVoltage = 39.0f;
+    const float maxVoltage = 54.0f;
 
     float batteryVoltage = getBatteryVoltage();
     float batteryLevel = (batteryVoltage - minVoltage) / (maxVoltage - minVoltage);

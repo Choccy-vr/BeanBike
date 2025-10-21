@@ -25,6 +25,12 @@ public:
 
     // Battery
     float batteryVoltageDividerRatio = 19.0f;
+
+    // Throttle
+    float throttleMinVoltage = 0.9f;
+    float throttleMaxVoltage = 3.2f;
+    float throttleDeadband = 0.05f;
+    float throttleFilterAlpha = 0.2f; // 0..1 EMA weight
 };
 
 #endif

@@ -20,7 +20,7 @@ const PinDef Pins::MOTOR_HALL_B = {"MOTOR_HALL_B", 10, INPUT};
 const PinDef Pins::MOTOR_HALL_C = {"MOTOR_HALL_C", 11, INPUT};
 const PinDef Pins::SENSOR_THROTTLE_DATA = {"SENSOR_THROTTLE_DATA", 34, INPUT};
 const PinDef Pins::SENSOR_PAS_PULSE = {"SENSOR_PAS_PULSE", 35, INPUT};
-const PinDef Pins::SENSOR_BRAKE_SIGNAL = {"SENSOR_BRAKE_SIGNAL", 32, INPUT};
+const PinDef Pins::SENSOR_BRAKE_SIGNAL = {"SENSOR_BRAKE_SIGNAL", 32, INPUT_PULLUP};
 
 
 void Pins::initPins() {
@@ -64,4 +64,5 @@ void Pins::initPins() {
     pinMode(SENSOR_PAS_PULSE.pin, SENSOR_PAS_PULSE.mode);
     attachInterrupt(digitalPinToInterrupt(SENSOR_PAS_PULSE.pin), Motor::onPasPulse, RISING);
     pinMode(SENSOR_BRAKE_SIGNAL.pin, SENSOR_BRAKE_SIGNAL.mode);
+    attachInterrupt(digitalPinToInterrupt(SENSOR_BRAKE_SIGNAL.pin), Motor::COAST, FALLING);
 }

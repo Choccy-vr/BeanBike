@@ -5,14 +5,25 @@
 class Motor {
 public:
     float rpm;
+    float mph;
+    bool isCruiseControl;
+    float targetMph;
+    bool isPASMode;
+    int pasLevel;
+    float lastBusVoltage;
+    float lastPhaseCurrent;
+    float lastElectricalPower;
 
     static void onHallChange();
     static void onPasPulse();
     void setPASMode(int mode);
     void CalculateSpeed();
-    void Brake();
+    static void COAST();
+    static void BRAKE();
     void updateCruiseControl();
     void updatePASControl();
+    void updateThrottleControl();
+    
     
 };
 

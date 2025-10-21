@@ -26,11 +26,13 @@ int pasLevel = 0;
 float pasCadenceRpm = 0.0f;
 volatile uint32_t pasPulseCount = 0;
 volatile uint32_t lastPasPulseMicros = 0;
+float throttleFilteredRatio = 0.0f;
 
 UART uart;
 Config config;
 DRV8353 drv8353;
 Battery battery;
+Pins pins;
 
 float lastBusVoltage = 0.0f;
 float lastPhaseCurrent = 0.0f;
@@ -263,11 +265,14 @@ int CalculateMotorPowerPAS() {
 }
 #pragma endregion
 
-void Motor::Brake() {
+void Motor::COAST() {
     drv8353.send3PWMMotorSignal(0, 0, 0);
     drv8353.setCoast(true);
 }
-
+void Motor::BRAKE() {
+    drv8353.send3PWMMotorSignal(0, 0, 0);
+    drv8353.setBrake(true);
+}
 void Motor::updateCruiseControl() {
     if (isCruiseControl) {
         drv8353.setCoast(false);
@@ -306,4 +311,44 @@ void Motor::updatePASControl() {
     if (isPASMode) {
         CalculateMotorPowerPAS();
     }
+}
+
+void Motor::updateThrottleControl() {
+    const float throttleVoltage = readAdcVoltage(Pins::SENSOR_THROTTLE_DATA);
+    uart.sendData("THROTTLE_VOLT", String(throttleVoltage, 2));
+
+    const float vMin = config.throttleMinVoltage;
+    const float vMax = config.throttleMaxVoltage;
+    float rawRatio = 0.0f;
+    if (vMax > vMin) {
+        rawRatio = (throttleVoltage - vMin) / (vMax - vMin);
+    }
+    rawRatio = constrain(rawRatio, 0.0f, 1.0f);
+
+    if (rawRatio < config.throttleDeadband) {
+        rawRatio = 0.0f;
+    }
+
+    const float alpha = constrain(config.throttleFilterAlpha, 0.0f, 1.0f);
+    throttleFilteredRatio += alpha * (rawRatio - throttleFilteredRatio);
+
+    if (throttleFilteredRatio < 0.001f) {
+        throttleFilteredRatio = 0.0f;
+        uart.sendData("THROTTLE_RATIO", "0");
+        uart.sendData("THROTTLE_PWM", "0");
+        return;
+    }
+
+    uart.sendData("THROTTLE_RATIO", String(throttleFilteredRatio, 3));
+
+    isCruiseControl = false;
+
+    const int requestedPwm = static_cast<int>(roundf(throttleFilteredRatio * ((1 << 16) - 1)));
+    int pwmValue = applyPowerLimit(requestedPwm);
+
+    drv8353.setCoast(false);
+    drv8353.send3PWMMotorSignal(pwmValue, pwmValue, pwmValue);
+
+    uart.sendData("THROTTLE_PWM_REQUEST", String(requestedPwm));
+    uart.sendData("THROTTLE_PWM", String(pwmValue));
 }
