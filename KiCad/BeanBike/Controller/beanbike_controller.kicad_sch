@@ -1039,10 +1039,6 @@
 		(uuid "04bc5c10-000c-4381-a9ae-1722bbc7f185")
 	)
 	(no_connect
-		(at 120.65 115.57)
-		(uuid "1d54db37-867d-4f27-92a9-e94c7017185a")
-	)
-	(no_connect
 		(at 120.65 110.49)
 		(uuid "6f50caa2-fd86-4b65-a743-8e5264f8af43")
 	)
@@ -1051,20 +1047,12 @@
 		(uuid "75082043-ad2c-4528-9c60-2cdec647714f")
 	)
 	(no_connect
-		(at 120.65 123.19)
-		(uuid "c424f257-56ca-470a-8804-8302a00fc874")
-	)
-	(no_connect
 		(at 120.65 87.63)
 		(uuid "d4781b3c-b245-49f6-b1e5-0575397a9a62")
 	)
 	(no_connect
 		(at 120.65 85.09)
 		(uuid "d69a98d2-3aeb-448a-9ce2-fe1df377c637")
-	)
-	(no_connect
-		(at 120.65 118.11)
-		(uuid "e5170073-496b-418c-a39e-959fea176f6e")
 	)
 	(wire
 		(pts
@@ -1314,6 +1302,28 @@
 			)
 		)
 	)
+	(global_label "MCU-GPIO11"
+		(shape input)
+		(at 120.65 123.19 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "74095481-bd1a-4d69-afe5-4d18995fa3d7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 105.1462 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "MCU-GPIO19"
 		(shape input)
 		(at 151.13 113.03 0)
@@ -1534,6 +1544,28 @@
 			)
 		)
 	)
+	(global_label "MCU-GPIO10"
+		(shape input)
+		(at 120.65 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bf4d8694-1111-4100-bba0-b8dfc026bee8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 105.1462 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "MCU-GPIO4"
 		(shape input)
 		(at 151.13 90.17 0)
@@ -1574,6 +1606,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "MCU-GPIO9"
+		(shape input)
+		(at 120.65 115.57 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d5b8fa7b-96ec-4d80-abc1-00c37050b90e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 106.3557 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)

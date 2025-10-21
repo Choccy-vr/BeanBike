@@ -1,18 +1,25 @@
 #include <Arduino.h>
-
-// put function declarations here:
-int myFunction(int, int);
-
+#include "pins.h"
+#include "motor.h"
+#include "UART.h"
+#include "DRV8353.h"
+#include "battery.h"
+Pins pins;
+Motor motor;
+UART uart;
+DRV8353 drv8353;
+Battery battery;
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  pins.initPins();
+  uart.init();
+  drv8353.init();
+  battery.updateBatteryStatus();
 }
+
+
 
 void loop() {
-  // put your main code here, to run repeatedly:
-}
-
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+  motor.CalculateSpeed();
+  motor.updateCruiseControl();
+  motor.updatePASControl();
 }

@@ -8,3 +8,7 @@ void UART::init() {
 void UART::sendMessage(String message) {
     Serial.println(message);
 }
+void UART::sendData(String name, String data) {
+    Serial.print(name + ":" + data);
+
+}
