@@ -138,10 +138,16 @@ So I finished the firmware!!
 Software is never finished; I can just keep adding and adding, and I plan to. This is just it has enough that it will work, I can always change it. That is the great thing about software. Anyway some of the calculations may be off but this is because I don't have the motor or bike to base it off of. I am going to keep adding to it, but as of now, to the display!
   
 
-## 10/22/2025 - Research & Schematic  
+## 10/22/2025 5 PM - Research & Schematic  
 
 So I researched for a while, and I landed on the Pi Zero 2 W.
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDU2OCwicHVyIjoiYmxvYl9pZCJ9fQ==--6fd2efb287dfc8b247b4d17e009694db5245a198/image.png)
 Most of the time spent on this journal was researching, I couldn't choose what to run my display on, and a display. I needed a ~3.5in display, and SPI just wouldn't really work, so the next abundant option was DSI. But another problem arose, the board I was planning on using, the Pi Zero 2 W, doesn't have DSI. So I was contemplating using a Compute module or using an HDMI display with the zero. I decided to use an HDMI display, even though it is a bit more expensive, it is easily swappable, so if anything ever goes wrong. This PCB isn't a complicated one, not supposed to be, mainly just supposed to organize my board.
   
+
+## 10/22/2025 7 PM - Display PCB  
+
+So I finished the Display PCB
+![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDU3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--2bc1e2595868143400e8865724199583cefaddb9/image.png)
+Again, just re-stating this is not supposed to be a complex PCB, just something to better organize my screen. So with that out of the way, now it is on to the most important part of this, making the customized OS. This custom OS will let me strip down to just what I need, further decreasing boot time, and as a bonus, it makes it seem more professional.  
 
