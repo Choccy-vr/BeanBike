@@ -151,3 +151,9 @@ So I finished the Display PCB
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDU3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--2bc1e2595868143400e8865724199583cefaddb9/image.png)
 Again, just re-stating this is not supposed to be a complex PCB, just something to better organize my screen. So with that out of the way, now it is on to the most important part of this, making the customized OS. This custom OS will let me strip down to just what I need, further decreasing boot time, and as a bonus, it makes it seem more professional.  
 
+## 10/25/2025 - Bike App  
+
+I started work on the Bike app
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTQ2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--24a473f7c6f2d85725f4cca788a7aaed30806331/image.png)
+I think it looks really good. I am just working on the UI now, and functionality will come later. Also, quick update on this, I am really starting my YSWS rn and don't know if I will be able to finish this. I will try, but I might have to cut some things out.  
+
