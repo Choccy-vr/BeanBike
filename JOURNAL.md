@@ -151,9 +151,16 @@ So I finished the Display PCB
 ![image.png](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NDU3OSwicHVyIjoiYmxvYl9pZCJ9fQ==--2bc1e2595868143400e8865724199583cefaddb9/image.png)
 Again, just re-stating this is not supposed to be a complex PCB, just something to better organize my screen. So with that out of the way, now it is on to the most important part of this, making the customized OS. This custom OS will let me strip down to just what I need, further decreasing boot time, and as a bonus, it makes it seem more professional.  
 
-## 10/25/2025 - Bike App  
+## 10/25/2025 11 AM - Bike App  
 
 I started work on the Bike app
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTQ2NCwicHVyIjoiYmxvYl9pZCJ9fQ==--24a473f7c6f2d85725f4cca788a7aaed30806331/image.png)
 I think it looks really good. I am just working on the UI now, and functionality will come later. Also, quick update on this, I am really starting my YSWS rn and don't know if I will be able to finish this. I will try, but I might have to cut some things out.  
+
+## 10/25/2025 2 PM - Way too many variables  
+
+I have way way way to many variables.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTUwNiwicHVyIjoiYmxvYl9pZCJ9fQ==--39f5abd616f51b6b0e33ffb597341941d46820f5/image.png)
+Like it is absurd to creater this UART script it took 2 hrs of mindless copy and pasting. Anyway I am happy that it is done. I think that I still have to change a few things to make everything work all nice. I have to add a few more things and then v1 of the app will be done. I think since I am starting to get super busy I am going to strip out alot of what I planned but it still would be quite a advanced eBike and then through OTA updates keep adding.
+  
 
