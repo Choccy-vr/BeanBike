@@ -164,3 +164,10 @@ I have way way way to many variables.
 Like it is absurd to creater this UART script it took 2 hrs of mindless copy and pasting. Anyway I am happy that it is done. I think that I still have to change a few things to make everything work all nice. I have to add a few more things and then v1 of the app will be done. I think since I am starting to get super busy I am going to strip out alot of what I planned but it still would be quite a advanced eBike and then through OTA updates keep adding.
   
 
+## 10/25/2025 4 PM - Finish up Software  
+
+I finished up the software. 
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTUzNywicHVyIjoiYmxvYl9pZCJ9fQ==--d4f9e5b0feedd3e3632301108c10225ac0c55527/image.png)
+So I finished up the rest of the app and fixed a few things with the controller firmware. Then I built the firmware, and I tried to build the app turns out you need to be on Linux. So I tried macOS turns out that doesn't count as Linux, so I had to go into Ubuntu and build it there. Surprisingly more complicated than I thought. Anyway, I have it all built, and now I have to get it ready for shipping.
+  
+
