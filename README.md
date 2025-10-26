@@ -12,11 +12,11 @@ I made this because I really like eBikes they are just fun. I have always wanted
 
 #### Controller
 
-![](C:\Users\wante\AppData\Roaming\marktext\images\2025-10-25-16-12-07-image.png)
+![](https://github.com/Choccy-vr/BeanBike/blob/main/Images/Controller.png)
 
 #### Display
 
-![](C:\Users\wante\AppData\Roaming\marktext\images\2025-10-25-16-13-14-image.png)
+![](https://github.com/Choccy-vr/BeanBike/blob/main/Images/Display.png)
 
 ## BOM
 
