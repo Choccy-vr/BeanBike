@@ -178,3 +178,9 @@ This is by far the most time I have spent on one journal.
 This journal was a long one. I got everything ready for shipping. I made all my gerbers and BOMs for my PCB changed a good amount of my parts, just so I can get the PCBA cost down. README, organizing, and more. Always hated this part of hardware. It is always so boring and long. Anyway, I got some feedback that my project is at most a tier 2 and maybe a tier 3. That is not good at all. So I might add a GPS module, one problem with that is that although it will increase the price, something I am already over the tier 2 budget.
   
 
+## 10/26/2025 - Finished  
+
+Ok so I have finished it! I really wanted to get in GPS but I don't have the budget :(. I really need this to be a tier 2 project at least or some way to get the extra budget I am $35.39 over (which isn't that much) but I don't think I could cover that. I included the estimated price with GPS too just in case there is some way to get it covered. maybe by some miracle I can get tier 1 or some way to get the extra funds covered. I also researched the GPS module if I do get GPS I am going for the MAX-M10M-00B cheapest one I could find that is still well supported and accurate.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTc3MywicHVyIjoiYmxvYl9pZCJ9fQ==--02a111852c857e1da5ccd632dced7aabcc3a1be4/image.png)
+  
+
