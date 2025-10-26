@@ -64,5 +64,5 @@ void Pins::initPins() {
     pinMode(SENSOR_PAS_PULSE.pin, SENSOR_PAS_PULSE.mode);
     attachInterrupt(digitalPinToInterrupt(SENSOR_PAS_PULSE.pin), Motor::onPasPulse, RISING);
     pinMode(SENSOR_BRAKE_SIGNAL.pin, SENSOR_BRAKE_SIGNAL.mode);
-    attachInterrupt(digitalPinToInterrupt(SENSOR_BRAKE_SIGNAL.pin), Motor::COAST, FALLING);
+    attachInterrupt(digitalPinToInterrupt(SENSOR_BRAKE_SIGNAL.pin), Motor::BRAKE, FALLING);
 }

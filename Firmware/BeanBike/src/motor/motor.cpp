@@ -1,11 +1,7 @@
 #include <Arduino.h>
-#include "DRV8353.h"
-#include "motor.h"
-#include "UART.h"
-#include "config.h"
-#include "pins.h"
 #include <cmath>
-#include "battery.h"
+#include "motor.h"
+#include "globals.h"
 
 int hallEdgeCount = 0;
 const int PULSES_PER_MECH_REV = 138; // Adjust as needed to make accurate
@@ -15,28 +11,8 @@ constexpr uint32_t PAS_ACTIVITY_TIMEOUT_US = 600000; // 0.6 s without pulses = n
 constexpr float PAS_ASSIST_RATIOS[] = {0.0f, 0.25f, 0.4f, 0.6f, 0.8f, 1.0f};
 constexpr int PAS_MAX_LEVEL = (sizeof(PAS_ASSIST_RATIOS) / sizeof(PAS_ASSIST_RATIOS[0])) - 1;
 
-float rpm = 0;
-float mph = 0;
-
-bool isCruiseControl = false;
-float targetMph = 0.0f;
-
-bool isPASMode = false;
-int pasLevel = 0;
-float pasCadenceRpm = 0.0f;
 volatile uint32_t pasPulseCount = 0;
 volatile uint32_t lastPasPulseMicros = 0;
-float throttleFilteredRatio = 0.0f;
-
-UART uart;
-Config config;
-DRV8353 drv8353;
-Battery battery;
-Pins pins;
-
-float lastBusVoltage = 0.0f;
-float lastPhaseCurrent = 0.0f;
-float lastElectricalPower = 0.0f;
 
 float readAdcVoltage(const PinDef& pin) {
     if (config.adcResolutionBits <= 0 || config.adcReferenceVoltage <= 0.0f) {
@@ -77,29 +53,29 @@ float readAveragePhaseCurrentMagnitude() {
     return (ia + ib + ic) / 3.0f;
 }
 
-int applyPowerLimit(int requestedPwm) {
+static int applyPowerLimit(Motor& m, int requestedPwm) {
     if (requestedPwm <= 0 || config.maxMotorWattage <= 0) {
-        lastBusVoltage = 0.0f;
-        lastElectricalPower = 0.0f;
-        lastPhaseCurrent = 0.0f;
+        m.lastBusVoltage = 0.0f;
+        m.lastElectricalPower = 0.0f;
+        m.lastPhaseCurrent = 0.0f;
         uart.sendData("MOTOR_POWER_LIMIT_ACTIVE", "FALSE");
         return requestedPwm;
     }
 
-    lastBusVoltage = battery.getBatteryVoltage();
-    lastPhaseCurrent = readAveragePhaseCurrentMagnitude();
-    lastElectricalPower = lastBusVoltage * lastPhaseCurrent;
+    m.lastBusVoltage = battery.getBatteryVoltage();
+    m.lastPhaseCurrent = readAveragePhaseCurrentMagnitude();
+    m.lastElectricalPower = m.lastBusVoltage * m.lastPhaseCurrent;
 
-    uart.sendData("MOTOR_BUS_VOLT", String(lastBusVoltage, 2));
-    uart.sendData("MOTOR_PHASE_CURRENT", String(lastPhaseCurrent, 2));
-    uart.sendData("MOTOR_POWER_W", String(lastElectricalPower, 1));
+    uart.sendData("MOTOR_BUS_VOLT", String(m.lastBusVoltage, 2));
+    uart.sendData("MOTOR_PHASE_CURRENT", String(m.lastPhaseCurrent, 2));
+    uart.sendData("MOTOR_POWER_W", String(m.lastElectricalPower, 1));
 
-    if (lastElectricalPower <= static_cast<float>(config.maxMotorWattage)) {
+    if (m.lastElectricalPower <= static_cast<float>(config.maxMotorWattage)) {
         uart.sendData("MOTOR_POWER_LIMIT_ACTIVE", "FALSE");
         return requestedPwm;
     }
 
-    const float limitRatio = static_cast<float>(config.maxMotorWattage) / lastElectricalPower;
+    const float limitRatio = static_cast<float>(config.maxMotorWattage) / m.lastElectricalPower;
     const float clampedRatio = constrain(limitRatio, 0.0f, 1.0f);
     const int limitedPwm = static_cast<int>(roundf(requestedPwm * clampedRatio));
     uart.sendData("MOTOR_POWER_LIMIT_ACTIVE", "TRUE");
@@ -109,7 +85,7 @@ int applyPowerLimit(int requestedPwm) {
 
 
 
-float updatePasCadence() {
+static float updatePasCadence(Motor& m) {
     static uint32_t lastSampleMicros = 0;
     static uint32_t lastPulseCount = 0;
 
@@ -122,30 +98,30 @@ float updatePasCadence() {
     if (lastSampleMicros == 0) {
         lastPulseCount = pulseCountSnapshot;
         lastSampleMicros = nowMicros;
-        pasCadenceRpm = 0.0f;
-        return pasCadenceRpm;
+        m.pasCadenceRpm = 0.0f;
+        return m.pasCadenceRpm;
     }
 
     if (pulseCountSnapshot < lastPulseCount) {
         lastPulseCount = pulseCountSnapshot;
         lastSampleMicros = nowMicros;
-        pasCadenceRpm = 0.0f;
-        return pasCadenceRpm;
+        m.pasCadenceRpm = 0.0f;
+        return m.pasCadenceRpm;
     }
 
     const uint32_t deltaCount = pulseCountSnapshot - lastPulseCount;
     const uint32_t deltaMicros = nowMicros - lastSampleMicros;
 
     if (deltaCount == 0 || deltaMicros == 0 || config.pasPulsesPerRev <= 0) {
-        return pasCadenceRpm;
+        return m.pasCadenceRpm;
     }
 
     const float pedalRevs = deltaCount / static_cast<float>(config.pasPulsesPerRev);
-    pasCadenceRpm = (pedalRevs * 60000000.0f) / static_cast<float>(deltaMicros);
+    m.pasCadenceRpm = (pedalRevs * 60000000.0f) / static_cast<float>(deltaMicros);
 
     lastPulseCount = pulseCountSnapshot;
     lastSampleMicros = nowMicros;
-    return pasCadenceRpm;
+    return m.pasCadenceRpm;
 }
 
 void Motor::onHallChange() {
@@ -160,11 +136,12 @@ void Motor::onPasPulse() {
 
 #pragma region Calculations
 // Caluclations
-float wheelFactorMphPerRpm() {
+
+static float wheelFactorMphPerRpm() {
     const float wheelDiameterInches = static_cast<float>(config.wheelDiameterInches);
     return (PI * wheelDiameterInches / 63360.0f) * 60.0f;
 }
-void CalculateSpeed(){
+void Motor::CalculateSpeed(){
     static uint32_t lastCount = 0;
     static uint32_t lastSample = millis();
 
@@ -184,13 +161,14 @@ void CalculateSpeed(){
 
     lastCount = countSnapshot;
     lastSample = now;
-    RPMtoMPH();
+    mph = rpm * wheelFactorMphPerRpm();
+    uart.sendData("MOTOR_SPEED_MPH", String(mph, 2));
 }
-int clampPasLevel(int level) {
+static int clampPasLevel(int level) {
     return constrain(level, 0, PAS_MAX_LEVEL);
 }
 
-bool pedalsAreMoving() {
+static bool pedalsAreMoving() {
     noInterrupts();
     const uint32_t lastPulseMicrosSnapshot = lastPasPulseMicros;
     const uint32_t pulseCountSnapshot = pasPulseCount;
@@ -204,11 +182,8 @@ bool pedalsAreMoving() {
     const uint32_t elapsed = nowMicros - lastPulseMicrosSnapshot;
     return elapsed <= PAS_ACTIVITY_TIMEOUT_US;
 }
-void RPMtoMPH(){
-    const float mphPerRpm = wheelFactorMphPerRpm();
-    mph = rpm * mphPerRpm;
-}
-int CalculateMotorPowerSpeed(float targetMph) {
+
+static int CalculateMotorPowerSpeed(float targetMph) {
     const float mphPerRpm = wheelFactorMphPerRpm();
     if (mphPerRpm <= 0.0f || config.maxMotorRPM <= 0.0f) {
         return 0;
@@ -220,15 +195,15 @@ int CalculateMotorPowerSpeed(float targetMph) {
 
     return pwmValue;
 }
-int CalculateMotorPowerPAS() {
+static int CalculateMotorPowerPAS(Motor& m) {
     const float mphPerRpm = wheelFactorMphPerRpm();
-    if (!isPASMode || mphPerRpm <= 0.0f || config.maxMotorRPM <= 0.0f) {
+    if (!m.isPASMode || mphPerRpm <= 0.0f || config.maxMotorRPM <= 0.0f) {
         drv8353.send3PWMMotorSignal(0, 0, 0);
         drv8353.setCoast(true);
         uart.sendData("PAS_PEDAL_ACTIVE", "FALSE");
         uart.sendData("PAS_PWM", "0");
         uart.sendData("PAS_CADENCE_RPM", "0");
-        pasCadenceRpm = 0.0f;
+        m.pasCadenceRpm = 0.0f;
         return 0;
     }
 
@@ -238,23 +213,23 @@ int CalculateMotorPowerPAS() {
     if (!pedaling) {
         drv8353.send3PWMMotorSignal(0, 0, 0);
         drv8353.setCoast(true);
-        pasCadenceRpm = 0.0f;
+        m.pasCadenceRpm = 0.0f;
         uart.sendData("PAS_PWM", "0");
         uart.sendData("PAS_CADENCE_RPM", "0");
         return 0;
     }
 
-    const float assistRatio = PAS_ASSIST_RATIOS[pasLevel];
+    const float assistRatio = PAS_ASSIST_RATIOS[m.pasLevel];
     const float targetRPM = config.maxMotorRPM * assistRatio;
     const float targetMph = targetRPM * mphPerRpm;
 
     const int requestedPwm = CalculateMotorPowerSpeed(targetMph);
-    int pwmValue = applyPowerLimit(requestedPwm);
+    int pwmValue = applyPowerLimit(m, requestedPwm);
     drv8353.setCoast(false);
     drv8353.send3PWMMotorSignal(pwmValue, pwmValue, pwmValue);
 
-    const float cadence = updatePasCadence();
-    uart.sendData("PAS_LEVEL", String(pasLevel));
+    const float cadence = updatePasCadence(m);
+    uart.sendData("PAS_LEVEL", String(m.pasLevel));
     uart.sendData("PAS_ASSIST_RATIO", String(assistRatio, 2));
     uart.sendData("PAS_CADENCE_RPM", String(cadence, 1));
     uart.sendData("PAS_TARGET_RPM", String(targetRPM, 2));
@@ -277,7 +252,7 @@ void Motor::updateCruiseControl() {
     if (isCruiseControl) {
         drv8353.setCoast(false);
         int requestedPwm = CalculateMotorPowerSpeed(targetMph);
-        int pwmValue = applyPowerLimit(requestedPwm);
+        int pwmValue = applyPowerLimit(*this, requestedPwm);
         drv8353.send3PWMMotorSignal(pwmValue, pwmValue, pwmValue);
         uart.sendData("CRUISE_CONTROL_TARGET", String(targetMph));
         uart.sendData("CRUISE_PWM_REQUEST", String(requestedPwm));
@@ -298,7 +273,7 @@ void Motor::setPASMode(int mode) {
         pasPulseCount = 0;
         lastPasPulseMicros = 0;
         interrupts();
-        pasCadenceRpm = 0.0f;
+    pasCadenceRpm = 0.0f;
         drv8353.send3PWMMotorSignal(0, 0, 0);
         drv8353.setCoast(true);
         uart.sendData("PAS_PEDAL_ACTIVE", "FALSE");
@@ -309,11 +284,24 @@ void Motor::setPASMode(int mode) {
 
 void Motor::updatePASControl() {
     if (isPASMode) {
-        CalculateMotorPowerPAS();
+        CalculateMotorPowerPAS(*this);
     }
 }
 
 void Motor::updateThrottleControl() {
+    const bool brakeActive = digitalRead(Pins::SENSOR_BRAKE_SIGNAL.pin) == LOW;
+    uart.sendData("BRAKE_ACTIVE", brakeActive ? "TRUE" : "FALSE");
+
+    if (brakeActive) {
+        isCruiseControl = false;
+        throttleFilteredRatio = 0.0f;
+        drv8353.send3PWMMotorSignal(0, 0, 0);
+        drv8353.setCoast(true);
+        uart.sendData("THROTTLE_RATIO", "0");
+        uart.sendData("THROTTLE_PWM", "0");
+        return;
+    }
+
     const float throttleVoltage = readAdcVoltage(Pins::SENSOR_THROTTLE_DATA);
     uart.sendData("THROTTLE_VOLT", String(throttleVoltage, 2));
 
@@ -344,7 +332,7 @@ void Motor::updateThrottleControl() {
     isCruiseControl = false;
 
     const int requestedPwm = static_cast<int>(roundf(throttleFilteredRatio * ((1 << 16) - 1)));
-    int pwmValue = applyPowerLimit(requestedPwm);
+    int pwmValue = applyPowerLimit(*this, requestedPwm);
 
     drv8353.setCoast(false);
     drv8353.send3PWMMotorSignal(pwmValue, pwmValue, pwmValue);

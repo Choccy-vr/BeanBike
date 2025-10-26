@@ -1,14 +1,12 @@
 #include <Arduino.h>
-#include "pins.h"
-#include "motor.h"
-#include "UART.h"
-#include "DRV8353.h"
-#include "battery.h"
+#include "globals.h"
+
 Pins pins;
 Motor motor;
 UART uart;
 DRV8353 drv8353;
 Battery battery;
+Config config;
 void uartReceiveCommandTask(void *pvParameters) {
   while (true) {
     uart.receiveCommand();  // Poll for commands

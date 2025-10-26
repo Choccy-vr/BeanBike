@@ -1,14 +1,10 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include "DRV8353.h"
-#include "pins.h"
-#include "UART.h"
-#include "config.h"
-Pins pins;
-int csPin = 5;
-String faultMessage = "";
-UART uart;
-Config config;
+#include "globals.h"
+
+static int csPin = 5;
+static String faultMessage = "";
 
 #pragma DRV8353 SPI
 void beginTransaction() {
@@ -235,19 +231,19 @@ void DRV8353::clearFault() {
 }
 void DRV8353::setOcpActionAllBridges(bool enable) {
     updateDriverControlBit(DRIVER_CTRL_OCP_ACT, enable);
-    uart.sendData("DRV_OCP_ACT", enable ? "ALL" : "HALF");
+    uart.sendData("DRV_OCP_ACT", enable ? "TRUE" : "FALSE");
 }
 void DRV8353::enableChargePumpUvFault(bool enable) {
     updateDriverControlBit(DRIVER_CTRL_DIS_GDUV, !enable);
-    uart.sendData("DRV_GDUV_FAULT", enable ? "ENABLED" : "DISABLED");
+    uart.sendData("DRV_GDUV_FAULT", enable ? "TRUE" : "FALSE");
 }
 void DRV8353::enableGateDriveFault(bool enable) {
     updateDriverControlBit(DRIVER_CTRL_DIS_GDF, !enable);
-    uart.sendData("DRV_GDF_FAULT", enable ? "ENABLED" : "DISABLED");
+    uart.sendData("DRV_GDF_FAULT", enable ? "TRUE" : "FALSE");
 }
 void DRV8353::enableOtwReporting(bool enable) {
     updateDriverControlBit(DRIVER_CTRL_OTW_REP, enable);
-    uart.sendData("DRV_OTW_REPORT", enable ? "ON" : "OFF");
+    uart.sendData("DRV_OTW_REPORT", enable ? "TRUE" : "FALSE");
 }
 void DRV8353::setPwmMode(PWMMode mode) {
     uint16_t field = static_cast<uint16_t>(mode) << 5;
@@ -261,11 +257,11 @@ void DRV8353::setPwmMode(PWMMode mode) {
 }
 void DRV8353::setOnePwmComAsync(bool enable) {
     updateDriverControlBit(DRIVER_CTRL_1PWM_COM, enable);
-    uart.sendData("DRV_1PWM_COM", enable ? "ASYNC" : "SYNC");
+    uart.sendData("DRV_1PWM_COM", enable ? "TRUE" : "FALSE");
 }
 void DRV8353::setOnePwmDirHigh(bool enable) {
     updateDriverControlBit(DRIVER_CTRL_1PWM_DIR, enable);
-    uart.sendData("DRV_1PWM_DIR", enable ? "HIGH" : "FOLLOW");
+    uart.sendData("DRV_1PWM_DIR", enable ? "TRUE" : "FALSE");
 }
 void DRV8353::setCoast(bool enable) {
     updateDriverControlBit(DRIVER_CTRL_COAST, enable);
@@ -279,7 +275,7 @@ void DRV8353::setBrake(bool enable) {
 void DRV8353::lockGateDriveRegisters(bool lock) {
     uint16_t field = static_cast<uint16_t>((lock ? 0b110u : 0b011u) << 8);
     updateRegisterField(GATE_DRIVE_HS_ADDR, GATE_HS_LOCK_MASK, field);
-    uart.sendData("DRV_LOCK", lock ? "LOCKED" : "UNLOCKED");
+    uart.sendData("DRV_LOCK", lock ? "TRUE" : "FALSE");
 }
 
 void DRV8353::setHighSideSourceCurrentCode(uint8_t code) {
@@ -296,7 +292,7 @@ void DRV8353::setHighSideSinkCurrentCode(uint8_t code) {
 
 void DRV8353::setCbcClearingByPwm(bool enabled) {
     updateRegisterBit(GATE_DRIVE_LS_ADDR, GATE_LS_CBC_MASK, enabled);
-    uart.sendData("DRV_LS_CBC", enabled ? "PWM" : "TIMEOUT");
+    uart.sendData("DRV_LS_CBC", enabled ? "TRUE" : "FALSE");
 }
 
 void DRV8353::setLowSideTdriveCode(uint8_t code) {
@@ -369,22 +365,22 @@ void DRV8353::setCsaGain(CsaGain gain) {
 
 void DRV8353::enableSenseOcp(bool enable) {
     updateRegisterBit(CSA_CONTROL_ADDR, CSA_DIS_SEN_MASK, !enable);
-    uart.sendData("DRV_CSA_OCP", enable ? "ENABLED" : "DISABLED");
+    uart.sendData("DRV_CSA_OCP", enable ? "TRUE" : "FALSE");
 }
 
 void DRV8353::calibrateSenseAmpA(bool enable) {
     updateRegisterBit(CSA_CONTROL_ADDR, CSA_CAL_A_MASK, enable);
-    uart.sendData("DRV_CSA_CAL_A", enable ? "ON" : "OFF");
+    uart.sendData("DRV_CSA_CAL_A", enable ? "TRUE" : "FALSE");
 }
 
 void DRV8353::calibrateSenseAmpB(bool enable) {
     updateRegisterBit(CSA_CONTROL_ADDR, CSA_CAL_B_MASK, enable);
-    uart.sendData("DRV_CSA_CAL_B", enable ? "ON" : "OFF");
+    uart.sendData("DRV_CSA_CAL_B", enable ? "TRUE" : "FALSE");
 }
 
 void DRV8353::calibrateSenseAmpC(bool enable) {
     updateRegisterBit(CSA_CONTROL_ADDR, CSA_CAL_C_MASK, enable);
-    uart.sendData("DRV_CSA_CAL_C", enable ? "ON" : "OFF");
+    uart.sendData("DRV_CSA_CAL_C", enable ? "TRUE" : "FALSE");
 }
 
 void DRV8353::setSenseOcpThreshold(SenseOcpLevel level) {

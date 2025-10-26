@@ -1,0 +1,21 @@
+name: bike_app
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  dart_periphery: ^0.9.19
+  flutter:
+    sdk: flutter
+  window_manager: ^0.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

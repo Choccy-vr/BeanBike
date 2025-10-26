@@ -13,6 +13,8 @@ public:
     float lastBusVoltage;
     float lastPhaseCurrent;
     float lastElectricalPower;
+    float pasCadenceRpm;
+    float throttleFilteredRatio;
 
     static void onHallChange();
     static void onPasPulse();

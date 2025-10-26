@@ -1,29 +1,7 @@
 #include <Arduino.h>
 #include "UART.h"
-#include "config.h"
-#include "motor.h"
+#include "globals.h"
 
-Config config;
-Motor motor;
-
-void UART::init() {
-    Serial.begin(115200);
-    Serial.println("UART initialized!");
-}
-void UART::sendMessage(String message) {
-    Serial.println(message);
-}
-void UART::sendData(String name, String data) {
-    Serial.print(name + ":" + data);
-
-}
-void UART::receiveCommand() {
-    if (Serial.available() > 0) {
-        String command = Serial.readStringUntil('\n');
-        ParseCommand(command);
-        Serial.println("RECEIVED");
-    }
-}
 static bool tokenize(const String& line, String& cmd, String& item, String& arg) {
     int firstSpace = line.indexOf(' ');
     if (firstSpace < 0) return false;
@@ -42,6 +20,7 @@ static bool tokenize(const String& line, String& cmd, String& item, String& arg)
     arg.trim();
     return true;
 }
+
 void ParseCommand(String command) {
     String cmd, item, arg;
     if (!tokenize(command, cmd, item, arg)) {
@@ -92,10 +71,6 @@ void ParseCommand(String command) {
         } 
         else if (item == "CONFIG_THROTTLE_DEADBAND" && arg.length()) {
             config.throttleDeadband = arg.toFloat();
-            Serial.println("OK SET");
-        } 
-        else if (item == "CONFIG_THROTTLE_FILTER_ALPHA" && arg.length()) {
-            config.throttleFilterAlpha = arg.toFloat();
             Serial.println("OK SET");
         } 
         else if (item == "CONFIG_THROTTLE_FILTER_ALPHA" && arg.length()) {
@@ -209,3 +184,24 @@ void ParseCommand(String command) {
         Serial.println("ERR UNKNOWN CMD");
     }
 }
+
+void UART::init() {
+    Serial.begin(115200);
+    Serial.println("UART initialized!");
+}
+void UART::sendMessage(String message) {
+    Serial.println(message);
+}
+void UART::sendData(String name, String data) {
+    Serial.print(String("READ") + " " + name + " " + data);
+}
+
+
+void UART::receiveCommand() {
+    if (Serial.available() > 0) {
+        String command = Serial.readStringUntil('\n');
+        ParseCommand(command);
+        Serial.println("RECEIVED");
+    }
+}
+
