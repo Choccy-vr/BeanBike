@@ -171,3 +171,10 @@ I finished up the software.
 So I finished up the rest of the app and fixed a few things with the controller firmware. Then I built the firmware, and I tried to build the app turns out you need to be on Linux. So I tried macOS turns out that doesn't count as Linux, so I had to go into Ubuntu and build it there. Surprisingly more complicated than I thought. Anyway, I have it all built, and now I have to get it ready for shipping.
   
 
+## 10/25/2025 11 PM - Finishing Things Up  
+
+This is by far the most time I have spent on one journal.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTYwNywicHVyIjoiYmxvYl9pZCJ9fQ==--2440152016272448135fba9245d425a322155b4b/image.png)
+This journal was a long one. I got everything ready for shipping. I made all my gerbers and BOMs for my PCB changed a good amount of my parts, just so I can get the PCBA cost down. README, organizing, and more. Always hated this part of hardware. It is always so boring and long. Anyway, I got some feedback that my project is at most a tier 2 and maybe a tier 3. That is not good at all. So I might add a GPS module, one problem with that is that although it will increase the price, something I am already over the tier 2 budget.
+  
+
