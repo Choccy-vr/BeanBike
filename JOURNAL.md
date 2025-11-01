@@ -197,9 +197,16 @@ Well, I finally did it. I started a project journal.
 
 As my projects get more and more advanced, I really need somewhere to document my research, my notes, etc. I am actually finding it very beneficial, plus it makes it seem more professional. Anyway, a lot of stuff happened in this session. I really started to research all of the different things I am doing. Like for the MCU, I am moving away from the ESP32 to the STM32G4. And still researching this, but switching from UART to CAN. I am very excited about it seems like it is a vast step up from UART tbh, no clue why I didn't start with it, mostly because the ESP doesn't have that, and I didn't know a lot about it. Last remark paper has its limits. I want an iPad so bad  
 
-## 11/1/2025 - Last Bit of Research  
+## 11/1/2025 1 PM - Last Bit of Research  
 
 Well, I think I have done enough research to start working on the schematic.
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzQ1NSwicHVyIjoiYmxvYl9pZCJ9fQ==--58fcbf750fe9dae9b885ae1c4f47c23cc077103c/image.png)
 I have chosen new ICs for the buck converters. The LM2596HVS is for 48v to 5v. The TPS5430DDAR is for 5v to 3.3v. These, I feel, are going to help a lot. First of both are an all-in-one package, which is super nice. Then the LM2596HVS can do 3A, so that would also be nice. Both are also a lot less money. More went into it, but that was an overview. So here we go!  
+
+## 11/1/2025 2 PM - PCB v3 Schematic  
+
+I started work on PCB v3!
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzQ5MCwicHVyIjoiYmxvYl9pZCJ9fQ==--a3668d4a298a507899912396f088d1db928c90f4/image.png)
+So I got rid of pretty much all power items to replace them. 5V was pretty easy; I needed an external inductor, which I thought I got rid of, but fine. Also, I changed to TD1501HS50. Then, for 3.3,v I was going to use a buck converter, but I realized I could just use an LDO. So I picked the AMS1117-3.3, and that circuit is very simple. I am now going to the STM32!
+  
 
