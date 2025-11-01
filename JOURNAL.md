@@ -190,3 +190,10 @@ Some say research is the thief of all joy.
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Njg2MSwicHVyIjoiYmxvYl9pZCJ9fQ==--00efc03489d4fc69793eeb38d4877244492bba69/image.png)
 So, I need to narrow my PCB down to 4 layers, but after **researching**, I noticed a VESC project. Basically, it is an open-source project for motor controllers, firmware, etc., which is great. However, the hardware schematics haven't been updated for a while. Also, while I would know that it would work well, I don't know; something is just wrong with it. It kind of defeats the purpose of doing all of this by myself. So I will probably not copy off of it, but I will take inspiration just to make sure my board is ready for this. Also, I think maybe I might switch to an STM32. I don't like it, but it does make a lot of sense for this project, and I think it is cheaper and smaller than an ESP.  
 
+## 10/31/2025 - Project Journal?  
+
+Well, I finally did it. I started a project journal.
+![IMG_1542](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzI2OSwicHVyIjoiYmxvYl9pZCJ9fQ==--aa73d005171f7d1cbfa19cadc8502de49caa6619/IMG_1542.png)
+
+As my projects get more and more advanced, I really need somewhere to document my research, my notes, etc. I am actually finding it very beneficial, plus it makes it seem more professional. Anyway, a lot of stuff happened in this session. I really started to research all of the different things I am doing. Like for the MCU, I am moving away from the ESP32 to the STM32G4. And still researching this, but switching from UART to CAN. I am very excited about it seems like it is a vast step up from UART tbh, no clue why I didn't start with it, mostly because the ESP doesn't have that, and I didn't know a lot about it. Last remark paper has its limits. I want an iPad so bad  
+
