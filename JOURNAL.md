@@ -210,3 +210,9 @@ I started work on PCB v3!
 So I got rid of pretty much all power items to replace them. 5V was pretty easy; I needed an external inductor, which I thought I got rid of, but fine. Also, I changed to TD1501HS50. Then, for 3.3,v I was going to use a buck converter, but I realized I could just use an LDO. So I picked the AMS1117-3.3, and that circuit is very simple. I am now going to the STM32!
   
 
+## 11/1/2025 8 PM - Simple FOC & Resaerch!  
+
+I recently came across a project called [Simple FOC](https://github.com/simplefoc/Arduino-FOC).
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzYxMSwicHVyIjoiYmxvYl9pZCJ9fQ==--94e6e7519fb3c269a6ab5379d3a1ca9623f3c02a/image.png)
+This looks like it will be super nice for me and work pretty easily with my Motor IC and STM32. I also came across this YouTuber [Great Scott](https://www.youtube.com/@greatscottlab). I watched a good amount of his videos to get a better grasp on FOC and Electric Motors.  
+
