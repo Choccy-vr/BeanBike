@@ -1,4 +1,4 @@
-import 'dart:async';
+/*import 'dart:async';
 import 'package:dart_periphery/dart_periphery.dart';
 
 class UARTService {
@@ -607,3 +607,4 @@ class UARTFrame {
     return UARTFrame(command: cmd, item: item, argument: arg);
   }
 }
+*/

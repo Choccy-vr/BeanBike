@@ -7,7 +7,7 @@
 	(title_block
 		(title "BeanBike Controller Connectors")
 		(date "2025-10-10")
-		(rev "1")
+		(rev "3")
 		(company "Ginobeano")
 	)
 	(lib_symbols
@@ -3105,7 +3105,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 212.598 27.94 90)
 			(effects
 				(font
@@ -3184,7 +3184,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 211.328 48.26 90)
 			(effects
 				(font
@@ -3261,7 +3261,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 199.39 53.848 90)
 			(effects
 				(font
@@ -3338,7 +3338,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 200.66 33.528 90)
 			(effects
 				(font
@@ -3415,7 +3415,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
+		(property "Footprint" ""
 			(at 54.61 139.7 0)
 			(effects
 				(font
@@ -3501,7 +3501,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" ""
 			(at 121.92 139.7 0)
 			(effects
 				(font
@@ -3572,7 +3572,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
+		(property "Footprint" ""
 			(at 92.71 139.7 0)
 			(effects
 				(font
@@ -3844,7 +3844,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" ""
 			(at 186.69 139.7 0)
 			(effects
 				(font
@@ -3912,7 +3912,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 199.39 71.628 90)
 			(effects
 				(font
@@ -3991,7 +3991,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 211.328 66.04 90)
 			(effects
 				(font
@@ -4068,7 +4068,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+		(property "Footprint" ""
 			(at 156.21 139.7 0)
 			(effects
 				(font

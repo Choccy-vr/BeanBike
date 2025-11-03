@@ -7,7 +7,7 @@
 	(title_block
 		(title "BeanBike Controller")
 		(date "2025-10-08")
-		(rev "1")
+		(rev "3")
 		(company "Ginobeano")
 	)
 	(lib_symbols)

@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "BeanBike Controller Power")
-		(rev "1")
+		(rev "3")
 		(company "Ginobeano")
 	)
 	(lib_symbols
@@ -993,7 +993,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 35.052 125.73 90)
 			(effects
 				(font
@@ -1074,7 +1074,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Wire:SolderWire-2sqmm_1x02_P7.8mm_D2mm_OD3.9mm"
+		(property "Footprint" ""
 			(at 19.05 59.69 0)
 			(effects
 				(font
@@ -1345,7 +1345,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 43.942 125.73 90)
 			(effects
 				(font
@@ -1422,7 +1422,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
+		(property "Footprint" ""
 			(at 26.67 85.598 90)
 			(effects
 				(font

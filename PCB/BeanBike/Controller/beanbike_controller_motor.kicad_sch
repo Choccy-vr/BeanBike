@@ -7,7 +7,7 @@
 	(title_block
 		(title "BeanBike Controller Motor")
 		(date "2025-10-11")
-		(rev "1")
+		(rev "3")
 		(company "Ginobeano")
 	)
 	(lib_symbols
@@ -4069,7 +4069,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" ""
 			(at 77.47 39.37 0)
 			(effects
 				(font
@@ -4148,7 +4148,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" ""
 			(at 252.73 105.41 0)
 			(effects
 				(font
@@ -4219,7 +4219,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MOTORIC:RTA0040B"
+		(property "Footprint" ""
 			(at 109.22 102.87 0)
 			(effects
 				(font
@@ -4483,7 +4483,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" ""
 			(at 252.73 138.43 0)
 			(effects
 				(font
@@ -4556,7 +4556,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" ""
 			(at 261.62 44.45 0)
 			(effects
 				(font
@@ -4629,7 +4629,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" ""
 			(at 261.62 62.23 0)
 			(effects
 				(font
@@ -4702,7 +4702,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 82.55 130.81 0)
 			(effects
 				(font
@@ -4781,7 +4781,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" ""
 			(at 77.47 49.53 0)
 			(effects
 				(font
@@ -5256,7 +5256,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+		(property "Footprint" ""
 			(at 136.652 146.05 90)
 			(effects
 				(font
@@ -5335,7 +5335,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" ""
 			(at 80.01 67.31 0)
 			(effects
 				(font
@@ -5414,7 +5414,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+		(property "Footprint" ""
 			(at 136.652 115.57 90)
 			(effects
 				(font
@@ -5559,7 +5559,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" ""
 			(at 84.7852 62.23 0)
 			(effects
 				(font
@@ -5638,7 +5638,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" ""
 			(at 252.73 120.65 0)
 			(effects
 				(font
@@ -5843,7 +5843,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" ""
 			(at 64.77 39.37 0)
 			(effects
 				(font
@@ -5922,7 +5922,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" ""
 			(at 45.72 140.97 0)
 			(effects
 				(font
@@ -6001,7 +6001,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+		(property "Footprint" ""
 			(at 261.62 29.21 0)
 			(effects
 				(font
@@ -6073,7 +6073,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0201_0603Metric"
+		(property "Footprint" ""
 			(at 66.04 125.73 0)
 			(effects
 				(font
@@ -6152,7 +6152,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" ""
 			(at 44.958 101.6 90)
 			(effects
 				(font
@@ -6363,7 +6363,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+		(property "Footprint" ""
 			(at 136.652 130.81 90)
 			(effects
 				(font
