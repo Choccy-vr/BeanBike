@@ -216,3 +216,13 @@ I recently came across a project called [Simple FOC](https://github.com/simplefo
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NzYxMSwicHVyIjoiYmxvYl9pZCJ9fQ==--94e6e7519fb3c269a6ab5379d3a1ca9623f3c02a/image.png)
 This looks like it will be super nice for me and work pretty easily with my Motor IC and STM32. I also came across this YouTuber [Great Scott](https://www.youtube.com/@greatscottlab). I watched a good amount of his videos to get a better grasp on FOC and Electric Motors.  
 
+## 11/4/2025 - iPad!!!  
+
+It has been a while, but great news, I got an iPad!!!!!
+![IMG_0005](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODQ1MCwicHVyIjoiYmxvYl9pZCJ9fQ==--05b52dd160b8501ddb2c7695bd861b7b9fb7ab97/IMG_0005.png)
+
+Facebook Marketplace is a lifesaver. So instead of having a physical notebook, I can have a digital one! So I transferred everything from my paper notebook to my iPad. 
+I also set up the STM32 (at least the power pins) and researched more into how to develop with an STM32. I am very new to the whole STM32 thing. I might need to add an external oscillator, but idk. 
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODQ0OSwicHVyIjoiYmxvYl9pZCJ9fQ==--bd7a8a9915109d0573bdda74f8e7b09f9ae5b261/image.png)
+  
+
