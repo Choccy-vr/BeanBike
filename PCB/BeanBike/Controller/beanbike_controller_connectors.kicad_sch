@@ -1466,6 +1466,18 @@
 		)
 	)
 	(rectangle
+		(start 203.2 114.3)
+		(end 233.68 147.32)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 3b315b88-82a1-4578-bc90-6a9b8619b80c)
+	)
+	(rectangle
 		(start 40.64 114.3)
 		(end 69.85 147.32)
 		(stroke
@@ -1524,6 +1536,16 @@
 			(type none)
 		)
 		(uuid d51b3a09-a1d8-419f-a5d6-181ce1042da9)
+	)
+	(text "Debug Connector\n"
+		(exclude_from_sim no)
+		(at 218.694 113.792 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "09a7fa9e-5dd5-4ba5-80fc-30ff670d6a68")
 	)
 	(text "Display Connector\n"
 		(exclude_from_sim no)
@@ -1861,6 +1883,16 @@
 	)
 	(wire
 		(pts
+			(xy 219.71 128.27) (xy 219.71 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f7514be-da8b-4a9e-8df5-8939d20d524d")
+	)
+	(wire
+		(pts
 			(xy 209.55 69.85) (xy 223.52 69.85)
 		)
 		(stroke
@@ -1878,6 +1910,16 @@
 			(type default)
 		)
 		(uuid "a23597b5-ca53-444f-9ae4-dd53eafb1f4a")
+	)
+	(wire
+		(pts
+			(xy 228.6 128.27) (xy 219.71 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5a0d628-c97b-42c9-b6e9-f657c21766f4")
 	)
 	(wire
 		(pts
@@ -1988,6 +2030,26 @@
 			(type default)
 		)
 		(uuid "e1277ee2-fb3e-4701-a618-82d00a3fac6d")
+	)
+	(wire
+		(pts
+			(xy 214.63 128.27) (xy 214.63 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7a343d3-cc2a-43c4-a090-0b02e1880cd4")
+	)
+	(wire
+		(pts
+			(xy 217.17 128.27) (xy 217.17 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5efbc6c-9630-4760-8665-9206069c9631")
 	)
 	(wire
 		(pts
@@ -2505,6 +2567,28 @@
 			)
 		)
 	)
+	(global_label "MCU_TX"
+		(shape input)
+		(at 214.63 128.27 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "71c1a3cb-df04-445a-8e35-df49c8bdf2db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 214.63 118.0882 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "THROTTLE_DATA"
 		(shape input)
 		(at 95.25 134.62 90)
@@ -2835,6 +2919,28 @@
 			)
 		)
 	)
+	(global_label "MCU_RX"
+		(shape input)
+		(at 217.17 128.27 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d9eb039a-780b-4d50-8b6e-08387fd7a94f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 217.17 117.7858 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "DISPLAY_5V"
 		(shape input)
 		(at 96.52 48.26 180)
@@ -3151,6 +3257,72 @@
 			(project "Controller"
 				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea/2c1bff84-81c5-435a-a8af-2b7800a2d1fe"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 228.6 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "207516e3-11ae-45bc-80bd-ba23e411fd7d")
+		(property "Reference" "#PWR038"
+			(at 228.6 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 228.6 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 228.6 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 228.6 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe48d0f6-e3a0-4adf-86c4-f8277e62d054")
+		)
+		(instances
+			(project ""
+				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea/2c1bff84-81c5-435a-a8af-2b7800a2d1fe"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -4117,6 +4289,77 @@
 			(project ""
 				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea/2c1bff84-81c5-435a-a8af-2b7800a2d1fe"
 					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x03_Pin")
+		(at 217.17 139.7 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec4dcc0f-2abe-4d90-ae64-956768dbe24f")
+		(property "Reference" "J7"
+			(at 217.17 142.24 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "DEBUG Conn"
+			(at 217.17 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 217.17 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 217.17 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x03, script generated"
+			(at 217.17 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1af8314a-fa42-4bad-93ef-30a5f7d86146")
+		)
+		(pin "2"
+			(uuid "1a62e1c3-5c7a-44d7-bd20-7e8503913ef0")
+		)
+		(pin "3"
+			(uuid "fca1a5ec-89d4-4a02-917e-3cff867b31ba")
+		)
+		(instances
+			(project ""
+				(path "/645e8d68-d9e1-48b3-98a5-3b81aa58d1ea/2c1bff84-81c5-435a-a8af-2b7800a2d1fe"
+					(reference "J7")
 					(unit 1)
 				)
 			)
