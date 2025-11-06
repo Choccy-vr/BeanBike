@@ -226,3 +226,10 @@ I also set up the STM32 (at least the power pins) and researched more into how t
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODQ0OSwicHVyIjoiYmxvYl9pZCJ9fQ==--bd7a8a9915109d0573bdda74f8e7b09f9ae5b261/image.png)
   
 
+## 11/5/2025 - STM32  
+
+I am still working on the STM32.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6ODc3MCwicHVyIjoiYmxvYl9pZCJ9fQ==--7425cf95db7b59fdf8c8a2fa389fd0dd63f0ecf0/image.png)
+I am going a lot slower now, but still making good progress. I have set up all the special pins on the STM32, and now it is completely configured, except for the remaining general-use pins. Turns out that even though the STM32 supports CAN, you still need a transceiver, so  I added that.
+  
+
