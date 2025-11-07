@@ -233,3 +233,10 @@ I am still working on the STM32.
 I am going a lot slower now, but still making good progress. I have set up all the special pins on the STM32, and now it is completely configured, except for the remaining general-use pins. Turns out that even though the STM32 supports CAN, you still need a transceiver, so  I added that.
   
 
+## 11/6/2025 - Finished MCU  
+
+Well, I finally finished the MCU part of the schematic.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTAyNSwicHVyIjoiYmxvYl9pZCJ9fQ==--2f771eb96bbe8081a592d1645c3a6f56de4c2af9/image.png)
+Pretty much, I just added all those Global Labels and also fixed a few things. Now all that is left for the schematic is the motor driver, but I just need to attach those pins to the new MCU pins. Oh, also, I made a nice little table on my iPad to tell me what each pin does and whether it is in use or not. I am fast approaching the PCB layout, and to say the least, I am scared but also excited.
+  
+
