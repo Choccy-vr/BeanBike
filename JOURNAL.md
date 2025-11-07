@@ -240,10 +240,16 @@ Well, I finally finished the MCU part of the schematic.
 Pretty much, I just added all those Global Labels and also fixed a few things. Now all that is left for the schematic is the motor driver, but I just need to attach those pins to the new MCU pins. Oh, also, I made a nice little table on my iPad to tell me what each pin does and whether it is in use or not. I am fast approaching the PCB layout, and to say the least, I am scared but also excited.
   
 
-## 11/7/2025 - Almost!  
+## 11/7/2025 4 PM - Almost!  
 
 I am finally almost done with the schematic!
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTIzNSwicHVyIjoiYmxvYl9pZCJ9fQ==--a8bbd708810d157853680d104e61117989e37826/image.png)
 So I have pretty much everything done, but ... I learned that supposedly you need bulk capacitors for the motor phases, so yay. Also, I have to add a few things to stop the current from reversing. Then, after all that, it goes on to my least favorite part, Footprints and LCSC IDs!
   
+
+## 11/7/2025 5 PM - Schematic v3 Done!  
+
+I finally finished v3 of the schematic.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTI1NCwicHVyIjoiYmxvYl9pZCJ9fQ==--7d84afbedb900de7b1cb4a7b22631c4ac1e5b17d/image.png)
+So I changed a few things first, and probably most importantly, I had my MOSFETs wired wrong, which is embarrassing. I also didn't understand my driver's datasheet and wired VDRAIN wrong, but fixed that. So I think that is it, and time to go to footprints.  
 
