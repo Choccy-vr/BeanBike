@@ -253,3 +253,11 @@ I finally finished v3 of the schematic.
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTI1NCwicHVyIjoiYmxvYl9pZCJ9fQ==--7d84afbedb900de7b1cb4a7b22631c4ac1e5b17d/image.png)
 So I changed a few things first, and probably most importantly, I had my MOSFETs wired wrong, which is embarrassing. I also didn't understand my driver's datasheet and wired VDRAIN wrong, but fixed that. So I think that is it, and time to go to footprints.  
 
+## 11/7/2025 10 PM - Finished footprints v3 & Cost Optimization  
+
+I finished the footprints, hopefully for the last time.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTI4NiwicHVyIjoiYmxvYl9pZCJ9fQ==--54c752c9cc6a429a0472dfce42dd5edecc5d3b62/image.png)
+I hate footprints so much; it is so boring and tedious, but I got it out of the way. So, along with setting all the footprints, I also put in the LCSC ID for my BOM. I made sure to get all basic items. I think only two parts aren't basic, and they are the STM and the DRV. But onto the PCB. ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTI5MywicHVyIjoiYmxvYl9pZCJ9fQ==--ff7d56b64a02e47804718f5251d5f64550bb1f64/image.png)
+This is going to be fun.
+  
+
