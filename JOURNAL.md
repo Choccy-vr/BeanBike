@@ -261,10 +261,17 @@ I hate footprints so much; it is so boring and tedious, but I got it out of the 
 This is going to be fun.
   
 
-## 11/8/2025 - Fixed a few things on the schematic  
+## 11/8/2025 12 PM - Fixed a few things on the schematic  
 
 So I forgot a part on the schematic, but I fixed it. 
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTUxNCwicHVyIjoiYmxvYl9pZCJ9fQ==--bcc0214e67d315ce028f0d2f83b731ae112ed63f/image.png)
 I forgot to connect my connector data pins to my STM, so I had to find out what my sensors output (PWM, GPIO, etc.) Then I needed to use a level shifter to get them down to 3.3V LOGIC. I saved and updated everything, and now we have all of our components on the PCB, and we have to lay them out.
+  
+
+## 11/8/2025 4 PM - Started PCB v3  
+
+I started PCB v3 and laid everything out
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTU3MCwicHVyIjoiYmxvYl9pZCJ9fQ==--2022db395bf013b8071b9814a25b064f26dd23d1/image.png)
+The amount of care and precision I am putting into this PCB revision is insane. Anyway, I grouped up all the different components and arranged them to make sure it looks good, follows the datasheet, and is clean. Then I routed some pins. I made a few minor adjustments to the schematic, but nothing major.
   
 
