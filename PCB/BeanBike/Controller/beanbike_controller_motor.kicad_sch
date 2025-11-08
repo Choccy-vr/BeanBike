@@ -3937,7 +3937,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 77.47 39.37 0)
 			(effects
 				(font
@@ -3964,7 +3964,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C335106"
+		(property "LCSC" "C1525"
 			(at 77.47 39.37 0)
 			(effects
 				(font
@@ -4016,7 +4016,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TO-220AB:TO254P1050X476X2020-3"
 			(at 252.73 138.43 0)
 			(effects
 				(font
@@ -4087,7 +4087,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "DRV8353:QFN50P600X600X80-41N"
 			(at 109.22 102.87 0)
 			(effects
 				(font
@@ -4351,7 +4351,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TO-220AB:TO254P1050X476X2020-3"
 			(at 252.73 101.6 0)
 			(effects
 				(font
@@ -4424,7 +4424,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TO-220AB:TO254P1050X476X2020-3"
 			(at 261.62 44.45 0)
 			(effects
 				(font
@@ -4497,7 +4497,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TO-220AB:TO254P1050X476X2020-3"
 			(at 261.62 62.23 0)
 			(effects
 				(font
@@ -4570,7 +4570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 82.55 130.81 0)
 			(effects
 				(font
@@ -4597,7 +4597,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C163420"
+		(property "LCSC" "C17819"
 			(at 82.55 130.81 0)
 			(effects
 				(font
@@ -4649,7 +4649,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 77.47 49.53 0)
 			(effects
 				(font
@@ -4676,7 +4676,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C87144"
+		(property "LCSC" "C52923"
 			(at 77.47 49.53 0)
 			(effects
 				(font
@@ -5124,7 +5124,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RES_1L00x_BRN"
 			(at 136.652 146.05 90)
 			(effects
 				(font
@@ -5203,7 +5203,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 80.01 67.31 0)
 			(effects
 				(font
@@ -5230,7 +5230,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C87144"
+		(property "LCSC" "C52923"
 			(at 80.01 67.31 0)
 			(effects
 				(font
@@ -5282,7 +5282,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RES_1L00x_BRN"
 			(at 136.652 115.57 90)
 			(effects
 				(font
@@ -5427,7 +5427,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 84.7852 62.23 0)
 			(effects
 				(font
@@ -5454,7 +5454,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C88917"
+		(property "LCSC" "C1622"
 			(at 83.82 58.42 0)
 			(effects
 				(font
@@ -5506,7 +5506,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TO-220AB:TO254P1050X476X2020-3"
 			(at 252.73 120.65 0)
 			(effects
 				(font
@@ -5711,7 +5711,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 64.77 39.37 0)
 			(effects
 				(font
@@ -5738,7 +5738,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C84419"
+		(property "LCSC" "C45783"
 			(at 64.77 39.37 0)
 			(effects
 				(font
@@ -5790,7 +5790,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 45.72 140.97 0)
 			(effects
 				(font
@@ -5817,7 +5817,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C335106"
+		(property "LCSC" "C1525"
 			(at 45.72 140.97 0)
 			(effects
 				(font
@@ -5869,7 +5869,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "TO-220AB:TO254P1050X476X2020-3"
 			(at 261.62 29.21 0)
 			(effects
 				(font
@@ -5941,7 +5941,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 66.04 125.73 0)
 			(effects
 				(font
@@ -5968,7 +5968,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C87144"
+		(property "LCSC" "C52923"
 			(at 66.04 125.73 0)
 			(effects
 				(font
@@ -6020,7 +6020,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 44.958 101.6 90)
 			(effects
 				(font
@@ -6047,7 +6047,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C163420"
+		(property "LCSC" "C17819"
 			(at 43.18 101.6 0)
 			(effects
 				(font
@@ -6165,7 +6165,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "footprints:RES_1L00x_BRN"
 			(at 136.652 130.81 90)
 			(effects
 				(font

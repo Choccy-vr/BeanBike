@@ -3211,7 +3211,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 212.598 27.94 90)
 			(effects
 				(font
@@ -3238,7 +3238,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C137655"
+		(property "LCSC" "C17506"
 			(at 210.82 27.94 0)
 			(effects
 				(font
@@ -3356,7 +3356,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 211.328 48.26 90)
 			(effects
 				(font
@@ -3383,7 +3383,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C137655"
+		(property "LCSC" "C17506"
 			(at 209.55 48.26 0)
 			(effects
 				(font
@@ -3433,7 +3433,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 199.39 53.848 90)
 			(effects
 				(font
@@ -3460,7 +3460,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C98220"
+		(property "LCSC" "C17414"
 			(at 199.39 52.07 90)
 			(effects
 				(font
@@ -3510,7 +3510,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 200.66 33.528 90)
 			(effects
 				(font
@@ -3537,7 +3537,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C98220"
+		(property "LCSC" "C17414"
 			(at 200.66 31.75 90)
 			(effects
 				(font
@@ -3587,7 +3587,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical"
 			(at 54.61 139.7 0)
 			(effects
 				(font
@@ -3673,7 +3673,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 121.92 139.7 0)
 			(effects
 				(font
@@ -3744,7 +3744,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 92.71 139.7 0)
 			(effects
 				(font
@@ -4016,7 +4016,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
 			(at 186.69 139.7 0)
 			(effects
 				(font
@@ -4084,7 +4084,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 199.39 71.628 90)
 			(effects
 				(font
@@ -4111,7 +4111,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C98220"
+		(property "LCSC" "C17414"
 			(at 199.39 69.85 90)
 			(effects
 				(font
@@ -4163,7 +4163,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 211.328 66.04 90)
 			(effects
 				(font
@@ -4190,7 +4190,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C137655"
+		(property "LCSC" "C17506"
 			(at 209.55 66.04 0)
 			(effects
 				(font
@@ -4240,7 +4240,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
 			(at 156.21 139.7 0)
 			(effects
 				(font
@@ -4320,7 +4320,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical"
 			(at 217.17 139.7 0)
 			(effects
 				(font

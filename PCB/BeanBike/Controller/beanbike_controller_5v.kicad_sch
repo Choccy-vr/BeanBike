@@ -1221,7 +1221,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_D8.0mm_P3.50mm"
 			(at 88.5952 121.92 0)
 			(effects
 				(font
@@ -1357,7 +1357,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_SOD-123F"
 			(at 111.76 115.57 0)
 			(effects
 				(font
@@ -1395,6 +1395,15 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 111.76 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C64898"
+			(at 111.76 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1511,7 +1520,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
 			(at 96.2152 71.12 0)
 			(effects
 				(font

@@ -2,7 +2,7 @@
 	(version 20250114)
 	(generator "eeschema")
 	(generator_version "9.0")
-	(uuid "43a3dcfc-778b-4893-b534-2a5964056045")
+	(uuid "38871655-8d1d-4cb6-8897-3ed422ad8b7f")
 	(paper "A4")
 	(title_block
 		(rev "3")
@@ -997,7 +997,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 216.408 95.25 90)
 			(effects
 				(font
@@ -1017,6 +1017,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 214.63 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17437"
+			(at 214.63 95.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
