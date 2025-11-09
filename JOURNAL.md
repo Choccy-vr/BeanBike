@@ -296,3 +296,9 @@ The display board is done!!!!
 You might notice there is a lot more on here than before and you would be right. I had to add a CAN controller and transiever. I also added a header to the side for DEBUG or a GPS module. Do you know what is funny the price of both of these boards combined is less then what the controller use to cost and I added stuff!
   
 
+## 11/9/2025 2 PM - FINISHED & More Cost Optimization  
+
+I finally finished v3 of BeanBike.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTg0MywicHVyIjoiYmxvYl9pZCJ9fQ==--e7f35e6fff4f705527969346680f3d71aa3f6935/image.png)
+After a long time, this is done. I am not completely done; I still have to build and fix what may come up. I updated the BOM pictures wrl etc. I also spent some time further cost-optimizing it. I actually got lower than my old version, but shipping is just so much money, and nothing I can do about that. I picked the cheapest option.  
+
