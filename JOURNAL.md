@@ -282,3 +282,10 @@ I actually locked in so hard and am bascially done my PCB.
 I only have three connections left and that is the Motor Phases. I seprated the Encoder from the actual motor for better compatiblity of diffrent motors. I took a lot of time and care and got the PCB routed all nice and neat and it looks great. Only thing now are the stupid Phases. I am moving to a Ring connector and why in the world is it so incredibly hard to get a footprint for it. That will be tommorow's job.
   
 
+## 11/9/2025 - Finished PCB v3 & Cost optimization  
+
+I finally finally finished hopefully the last PCB version
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTc0OCwicHVyIjoiYmxvYl9pZCJ9fQ==--95f54f4294c77354362c789b0042c14751f58263/image.png)
+I really like how this came out it actually looks professional. Anyway I connected the remaining 3 lines. I ended up going with a ring connector reason being for higher motors like 2000w they use that and it is a better connector. I also shrnk the board just so I can be under 100mm so I don't have to pay extra! Now I am going to go check how much this is going to cost.
+  
+
