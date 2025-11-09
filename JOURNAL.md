@@ -275,3 +275,10 @@ I started PCB v3 and laid everything out
 The amount of care and precision I am putting into this PCB revision is insane. Anyway, I grouped up all the different components and arranged them to make sure it looks good, follows the datasheet, and is clean. Then I routed some pins. I made a few minor adjustments to the schematic, but nothing major.
   
 
+## 11/8/2025 10 PM - Almost there.  
+
+I actually locked in so hard and am bascially done my PCB.
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTY1MCwicHVyIjoiYmxvYl9pZCJ9fQ==--cb9b977bdf2a27eb4cc757b908c4e22dda0e7a07/image.png)
+I only have three connections left and that is the Motor Phases. I seprated the Encoder from the actual motor for better compatiblity of diffrent motors. I took a lot of time and care and got the PCB routed all nice and neat and it looks great. Only thing now are the stupid Phases. I am moving to a Ring connector and why in the world is it so incredibly hard to get a footprint for it. That will be tommorow's job.
+  
+
