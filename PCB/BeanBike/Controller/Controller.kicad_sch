@@ -179,11 +179,21 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "TODO:\n\nSOlid fill vias for thermal\ngrid vias for thermal \nseprate MOSFETs and Terminals"
+		(exclude_from_sim no)
+		(at 131.826 91.694 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "345466e4-59f7-425a-82d2-ada3f71fd8bc")
+	)
 	(symbol
 		(lib_id "Graphic:SYM_Hot_Large")
 		(at 132.08 50.8 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board no)
 		(dnp no)
@@ -226,15 +236,6 @@
 			)
 		)
 		(property "Description" "Hot surface warning symbol, large"
-			(at 132.08 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Enable" "0"
 			(at 132.08 50.8 0)
 			(effects
 				(font

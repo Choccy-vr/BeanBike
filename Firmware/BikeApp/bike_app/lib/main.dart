@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 // ignore: unused_import
 import 'package:window_manager/window_manager.dart';
 
-import 'UART.dart';
+//import 'UART.dart';
 import '/pages/main_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //uncomment at build
-  /*await windowManager.ensureInitialized();
+  await windowManager.ensureInitialized();
 
   WindowOptions windowOptions = WindowOptions(fullScreen: true);
   windowManager.waitUntilReadyToShow(windowOptions, () async {
     await windowManager.show();
     await windowManager.focus();
-  });*/
+  });
 
   runApp(const MainApp());
 }
@@ -29,18 +29,18 @@ class MainApp extends StatefulWidget {
 class _MainAppState extends State<MainApp> {
   ThemeMode _themeMode = ThemeMode.light;
   final Color _seedColor = const Color.fromARGB(255, 14, 142, 60);
-  late final UARTService _uartService;
+  //late final UARTService _uartService;
 
   @override
   void initState() {
     super.initState();
-    _uartService = UARTService(devicePath: '/dev/serial0');
-    _uartService.open();
+    //_uartService = UARTService(devicePath: '/dev/serial0');
+    //_uartService.open();
   }
 
   @override
   void dispose() {
-    _uartService.dispose();
+    //_uartService.dispose();
     super.dispose();
   }
 
@@ -71,7 +71,7 @@ class _MainAppState extends State<MainApp> {
         theme: ThemeData(useMaterial3: true, colorScheme: light),
         darkTheme: ThemeData(useMaterial3: true, colorScheme: dark),
         themeMode: _themeMode,
-        home: MainPage(uartService: _uartService),
+        home: MainPage(/*uartService: _uartService*/),
         debugShowCheckedModeBanner: false,
       ),
     );

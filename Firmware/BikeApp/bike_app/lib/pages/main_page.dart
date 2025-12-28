@@ -2,12 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../UART.dart';
+//import '../UART.dart';
 
 class MainPage extends StatefulWidget {
-  const MainPage({super.key, required this.uartService});
+  const MainPage({super.key /*, required this.uartService*/});
 
-  final UARTService uartService;
+  //final UARTService uartService;
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -16,8 +16,8 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   String _currentTime = '';
   Timer? _timer;
-  late final UARTService _uart;
-  StreamSubscription<UARTFrame>? _frameSubscription;
+  //late final UARTService _uart;
+  //StreamSubscription<UARTFrame>? _frameSubscription;
   bool _isPasHovered = false;
   bool _isCruiseHovered = false;
 
@@ -25,11 +25,11 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    _uart = widget.uartService;
+    //_uart = widget.uartService;
     _updateTime();
     _timer = Timer.periodic(const Duration(seconds: 1), (_) => _updateTime());
 
-    if (_uart.pasLevel == null) {
+    /*if (_uart.pasLevel == null) {
       _uart.pasLevel = 0;
       _uart.pasModeEnabled = 0;
       unawaited(_uart.sendMsg('SET', 'PAS_LEVEL', '0'));
@@ -55,12 +55,12 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
           .catchError((_) {
             // Ignore parse errors for now; they are surfaced via the stream.
           });
-    });
+    });*/
   }
 
   @override
   void dispose() {
-    _frameSubscription?.cancel();
+    //_frameSubscription?.cancel();
     _timer?.cancel();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
@@ -90,7 +90,8 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   }
 
   void _showNumberPad() {
-    String tempSpeed = ((_uart.cruiseControlTarget ?? 0).round()).toString();
+    //String tempSpeed = ((_uart.cruiseControlTarget ?? 0).round()).toString();
+    String tempSpeed = '0'; // Temporary placeholder
     showDialog(
       context: context,
       builder: (context) {
@@ -187,7 +188,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                             onPressed: () {
                               final speed = int.tryParse(tempSpeed);
                               if (speed != null && speed >= 0 && speed <= 25) {
-                                setState(() {
+                                /*setState(() {
                                   _uart.cruiseControlTarget = speed.toDouble();
                                 });
                                 unawaited(
@@ -196,7 +197,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                     'CRUISE_CONTROL_TARGET',
                                     speed.toString(),
                                   ),
-                                );
+                                );*/
                               }
                               Navigator.pop(context);
                             },
@@ -223,10 +224,13 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final double speedValue = (_uart.speedMph ?? 0.0).clamp(0.0, 99.9);
+    //final double speedValue = (_uart.speedMph ?? 0.0).clamp(0.0, 99.9);
+    final double speedValue = 0.0; // Temporary placeholder
     final String speedDisplay = speedValue.toStringAsFixed(1).padLeft(4, '0');
-    final int pasLevel = _uart.pasLevel ?? 0;
-    final int cruiseSpeed = (_uart.cruiseControlTarget ?? 0).round();
+    //final int pasLevel = _uart.pasLevel ?? 0;
+    final int pasLevel = 0; // Temporary placeholder
+    //final int cruiseSpeed = (_uart.cruiseControlTarget ?? 0).round();
+    final int cruiseSpeed = 0; // Temporary placeholder
     final bool isCruiseControl = cruiseSpeed > 0;
 
     return Scaffold(
@@ -372,7 +376,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                             ElevatedButton(
                                               onPressed: pasLevel > 0
                                                   ? () {
-                                                      final newLevel =
+                                                      /*final newLevel =
                                                           pasLevel - 1;
                                                       final modeEnabled =
                                                           newLevel > 0 ? 1 : 0;
@@ -396,7 +400,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                                           modeEnabled
                                                               .toString(),
                                                         ),
-                                                      );
+                                                      );*/
                                                     }
                                                   : null,
                                               style: ElevatedButton.styleFrom(
@@ -458,7 +462,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                             ElevatedButton(
                                               onPressed: pasLevel < 5
                                                   ? () {
-                                                      final newLevel =
+                                                      /*final newLevel =
                                                           pasLevel + 1;
                                                       setState(() {
                                                         _uart.pasLevel =
@@ -479,7 +483,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                                           'PAS_MODE_ENABLED',
                                                           '1',
                                                         ),
-                                                      );
+                                                      );*/
                                                     }
                                                   : null,
                                               style: ElevatedButton.styleFrom(
@@ -549,7 +553,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                             ElevatedButton(
                                               onPressed: cruiseSpeed > 0
                                                   ? () {
-                                                      final newSpeed =
+                                                      /*final newSpeed =
                                                           (cruiseSpeed - 1)
                                                               .clamp(0, 25);
                                                       setState(() {
@@ -562,7 +566,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                                           'CRUISE_CONTROL_TARGET',
                                                           newSpeed.toString(),
                                                         ),
-                                                      );
+                                                      );*/
                                                     }
                                                   : null,
                                               style: ElevatedButton.styleFrom(
@@ -639,7 +643,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                             ElevatedButton(
                                               onPressed: cruiseSpeed < 25
                                                   ? () {
-                                                      final newSpeed =
+                                                      /*final newSpeed =
                                                           (cruiseSpeed + 1)
                                                               .clamp(0, 25);
                                                       setState(() {
@@ -652,7 +656,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                                           'CRUISE_CONTROL_TARGET',
                                                           newSpeed.toString(),
                                                         ),
-                                                      );
+                                                      );*/
                                                     }
                                                   : null,
                                               style: ElevatedButton.styleFrom(
@@ -671,7 +675,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                             const SizedBox(width: 16),
                                             ElevatedButton(
                                               onPressed: () {
-                                                final bool newEnabled =
+                                                /*final bool newEnabled =
                                                     !isCruiseControl;
                                                 final int target = newEnabled
                                                     ? (cruiseSpeed == 0
@@ -688,7 +692,7 @@ class _MainPageState extends State<MainPage> with WidgetsBindingObserver {
                                                     'CRUISE_CONTROL_TARGET',
                                                     target.toString(),
                                                   ),
-                                                );
+                                                );*/
                                               },
                                               style: ElevatedButton.styleFrom(
                                                 fixedSize: const Size(56, 56),
